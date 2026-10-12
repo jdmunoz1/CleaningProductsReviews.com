@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Arm & Hammer Clean Burst Detergent — placeholder image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(200, 35%, 92%)"/>
+      <stop offset="1" stop-color="hsl(200, 30%, 82%)"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(200, 30%, 99%)"/>
+      <stop offset="1" stop-color="hsl(200, 25%, 95%)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="1040" cy="140" r="220" fill="hsl(200, 35%, 76%)" opacity="0.5"/>
+  <circle cx="140" cy="780" r="260" fill="hsl(200, 35%, 78%)" opacity="0.45"/>
+  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(200, 30%, 72%)" stroke-width="2"/>
+  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="700" fill="hsl(200, 40%, 24%)">Arm &amp; Hammer</text>
+  <text x="600" y="455" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(200, 35%, 36%)">Clean Burst Detergent</text>
+  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(200, 32%, 92%)" stroke="hsl(200, 30%, 78%)"/>
+  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(200, 40%, 30%)">Review · Compare</text>
+  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(200, 30%, 42%)">Placeholder illustration</text>
+</svg>

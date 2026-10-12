@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Scrubbing Bubbles Daily Shower — placeholder image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(195, 55%, 90%)"/>
+      <stop offset="1" stop-color="hsl(175, 50%, 82%)"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(195, 40%, 99%)"/>
+      <stop offset="1" stop-color="hsl(195, 36%, 95%)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="1040" cy="140" r="220" fill="hsl(175, 48%, 74%)" opacity="0.5"/>
+  <circle cx="140" cy="780" r="260" fill="hsl(195, 55%, 76%)" opacity="0.45"/>
+  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(195, 45%, 70%)" stroke-width="2"/>
+  <text x="600" y="320" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" fill="hsl(178, 50%, 24%)">Scrubbing</text>
+  <text x="600" y="410" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" fill="hsl(178, 50%, 24%)">Bubbles</text>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(195, 45%, 36%)">Daily Shower</text>
+  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(178, 48%, 90%)" stroke="hsl(178, 45%, 78%)"/>
+  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(178, 50%, 30%)">Review · Compare</text>
+  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(195, 42%, 42%)">Placeholder illustration</text>
+</svg>

@@ -1,0 +1,76 @@
+{
+  slug: "best-pet-hair-removal-tools",
+  title: "Best Pet Hair Removal Tools (2025)",
+  description: "The best reusable rollers and rubber brushes for pet hair — friction tools that lift fur from sofa, car seats and carpet without sticky refills.",
+  metaDescription: "Best pet hair removal tools for 2025 — reusable rollers and rubber brushes that lift fur and dander from sofa, car seats and carpet without sticky tape refills.",
+  category: "pet-hair-removal-tools",
+  intro: [
+    P("Pet hair is a mechanical problem, so the honest answer is a mechanical tool: friction that grabs fur and dander from fabric without a power cord or a roll of sticky sheets. The selection weighs reach into carpet pile, sheer ease on furniture, and the cost of owning the tool over a year."),
+    P("No fur was measured in a lab by our team — this list is research-based from manufacturer information and pet-owner review consensus."),
+  ],
+  picks: [
+    {
+      productSlug: "chom-chom-roller",
+      tag: "Best for fabric & furniture",
+      blurb: [P("The reusable roller replaces sticky sheets with rubber that grabs sofa, car-seat and bedding fur — and its built-in base collects the fur. The best all-round pet hair tool for fabric-heavy homes.")],
+      pros: ["Reusable, no refill cost", "Portable for sofa and car", "Lifts dander, not just visible fur"],
+      cons: ["Manual rhythm", "Not a floor vacuum"],
+    },
+    {
+      productSlug: "furemover",
+      tag: "Best for carpet & rugs",
+      blurb: [P("Rubber bristles dig into carpet pile where suction alone leaves fur — the best complement to a household vacuum for embedded, hard-to-shift dog and cat hair.")],
+      pros: ["Grips embedded carpet fur", "No power or refills", "Durable and cheap to own"],
+      cons: ["Manual effort on large areas", "Hair, not dirt", "Tray needs emptying"],
+    },
+  ],
+  buyingGuide: [
+    P("Match the tool to the surface: rubber bristles for carpet and rugs that hold embedded fur, rubber rollers for sofas and car seats, and combine with the anti-tangle vacuum for floors."),
+    P("Money follows the tool format, not the brand: reusable tools win the long-run cost than sticky sheets which lose tack and rebuy forever — the reusable price is the true number to compare."),
+    P("The routine is the product: a fast sofa pass plus the vacuum is what actually keeps a pet home wearable."),
+  ],
+  methodology: [P("We shortlisted the popular reusable pet-hair tools and compared on grab, surface fit and long-run ownership cost from manufacturer documentation and owner feedback. No lab testing was performed.")],
+  faqs: [
+    { q: "Why not sticky lint rollers?", a: "Sticky sheets lose their tack, create waste and rebuy forever — reusable rubber tools grab more per dollar over time." },
+    { q: "Do I still need a pet-head vacuum?", a: "Yes for floors and volume shed — tools are complements for soft surfaces, not replacements." },
+    { q: "Which surface is hardest?", a: "Carpet pile and woven upholstery hold fur; rubbers help there most." },
+  ],
+},
+{
+  slug: "best-pet-odour-removers",
+  title: "Best Pet Odour Removers (2025)",
+  description: "The best sprays and concentrates for general pet smells — citrus neutralisers and fabric refreshers compared.",
+  metaDescription: "Best pet odour removers for sofa, bedding and litter-box smells — citrus neutralisers and fabric refreshers compared on scent, strength and value.",
+  category: "pet-odour-removers",
+  intro: [
+    P("General pet odour is a different problem from urine residue: it's embedded in fabric, and the correct tools are neutralisers (citrus, cyclodextrin) that bind the smell molecules rather than enzyme-digesting a stain. This selection is about scent, ease and per-use cost."),
+    P("No smells were produced in a lab by our team — the comparison is research-based."),
+  ],
+  picks: [
+    {
+      productSlug: "angry-orange",
+      tag: "Best overall odour eliminator",
+      blurb: [P("A concentrated citrus neutraliser that deodorises and spot-cleans, sold as the bargain price-per-dose favourite — the strongest all-round pick for general pet smells.")],
+      pros: ["Fresh citrus scent", "Concentrated value", "Odour + stain dual role"],
+      cons: ["Not an enzyme digester", "Fragrance preference"],
+    },
+    {
+      productSlug: "febreze-fabric",
+      tag: "Best fabric refresh",
+      blurb: [P("The universal spray-on neutraliser for sofas, beds and curtains — the easy maintenance pass that keeps soft goods fresh between deeper cleans.")],
+      pros: ["Neutralises fabric odours", "No-rinse routine", "Available everywhere"],
+      cons: ["Recurring cost", "Not enzyme deep-cleaning"],
+    },
+  ],
+  buyingGuide: [
+    P("Match the chemistry to the job: general soft-furnishing smell responds to neutraliser sprays; actual urine residue still calls for the enzyme hub."),
+    P("Understand the scent split: citrus concentrates give a real fragrance many adore, while fabric refreshers are subtle and universal; choose by household taste."),
+    P("Cost-per-dose favours concentrates that dilute, at the price of prep — factor dilution ratio into any price comparison."),
+  ],
+  methodology: [P("We compared the most-used pet odour removers on scent profile, neutralising chemistry, per-use cost and fabric safety from manufacturer documentation and user feedback. No live-lab testing was performed.")],
+  faqs: [
+    { q: "Is a citrus product or a fabric spray better?", a: "Depends on goal: citrus shines on general pet odour + staining, fabric sprays win for repeatedly refreshing sofas — many homes keep both." },
+    { q: "How do I get rid of pet smell in my sofa?", a: "Vacuum, then neutralise with a fabric spray; heavy urine requires an enzyme + extraction first." },
+    { q: "Should I avoid products with strong scent?", a: "If household scent tolerance is low, choose gentler variants; if it's the urine odour you're fighting, enzyme deep-cleaning matters more than perfume." },
+  ],
+},

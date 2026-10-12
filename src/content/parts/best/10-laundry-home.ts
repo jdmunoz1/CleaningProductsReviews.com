@@ -1,0 +1,45 @@
+{
+  slug: "best-eco-laundry-detergents",
+  title: "Best Eco Laundry Detergents (2025)",
+  description: "The best plant-based, fragrance-free and plastic-free laundry detergents — compared on formula, dosing and waste.",
+  metaDescription: "The best eco laundry detergents — plant-based liquids, fragrance-free sensitive formulas and plastic-free pods compared from research.",
+  category: "eco-laundry-detergents",
+  intro: [
+    P("Eco laundry detergents keep the full clean while dropping the petrochemicals: plant-based surfactants, dye-free and fragrance-free formulas for sensitive households, and pre-measured pods that end overdosing. The honest shortlist spans the trusted sensitive pick, the green jug and the plastic-free pod."),
+    P("No laundries were eco-washed in a lab by our team; balances come from manufacturer documentation and owner feedback."),
+  ],
+  picks: [
+    {
+      productSlug: "ecover-laundry-liquid",
+      tag: "Best plant-based everyday jug",
+      blurb: [P("Ecover swaps petrochemicals for plant-based clean that performs like the conventional bottle, cold-water efficient and mild on scent — the seamless green switch for everyday loads.")],
+      pros: ["Plant-based clean", "Cold-water efficient", "Sensitive-skin friendly", "Trusted eco brand"],
+      cons: ["Premium price", "Not for heavy set-in stains"],
+    },
+    {
+      productSlug: "seventh-generation-free-clear",
+      tag: "Best for sensitive skin",
+      blurb: [P("Dye-free, fragrance-free and plant-based, Seventh Generation Free & Clear is the trusted sensitive pick — the label reactive households actually rely on.")],
+      pros: ["Dye-free & fragrance-free", "Plant-based", "Sensitive skin pick", "HE-compatible"],
+      cons: ["Premium price", "Stubborn stains need pretreat"],
+    },
+    {
+      productSlug: "dropps-laundry-pods",
+      tag: "Best plastic-free pods",
+      blurb: [P("Dropps pre-measured, plant-based pods in plastic-free packaging take the waste and the guesswork out of the dose — at a per-load premium.")],
+      pros: ["No overdosing", "Plastic-free packaging", "Plant-based", "No-mess dosing"],
+      cons: ["Higher per-load cost", "Less load flexibility"],
+    },
+  ],
+  buyingGuide: [
+    P("Match the eco angle to your priority: sensitive skin wants dye-free and fragrance-free, waste reduction wants plastic-free pods, and a plain plant-based swap wants a credible liquid jug."),
+    P("Eco detergents cost more per load than mainstream. Budget honestly, or combine — a mainstream huge-jug for bulks with an eco option for delicate loads."),
+    P("Every eco detergent has the same pretreat truth: set-in stains need a dedicated stain remover regardless of brand."),
+  ],
+  methodology: [P("We compared eco laundry detergents on formula, sensitive-skin credentials, packaging waste and per-load value from manufacturer documentation and owner feedback. No laundry was lab-tested by our team.")],
+  faqs: [
+    { q: "Is eco detergent as strong as mainstream?", a: "For everyday soil, yes — plant-based formulas clean reliably; very heavy stains still call for a pretreater whatever brand you use." },
+    { q: "What does free & clear mean?", a: "Free of dyes and fragrances — the formula choice for sensitive and baby laundry, at a slight per-load premium." },
+    { q: "Are pods actually greener?", a: "Plastic-free packaging and plant-based formula reduce waste versus a plastic jug; pods cost more per load, so it's a waste-first trade." },
+  ],
+},

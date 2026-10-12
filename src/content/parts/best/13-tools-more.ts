@@ -1,0 +1,76 @@
+{
+  slug: "best-dusters",
+  title: "Best Dusters (2025)",
+  description: "The best extendable dusters for ceiling fans, blinds and above-floor dust — static reach compared.",
+  metaDescription: "The best dusters for ceiling fans, blinds and shelving — extendable static dusters compared on reach and refill cost.",
+  category: "dusters",
+  intro: [
+    P("Above-floor dust is the dust people actually notice, yet few tools are built for it. An extendable static duster solves reach and trapping at once, turning the top third of every room into a quick weekly pass. This ranking weighs reach, head design and the honest refill economics."),
+    P("No dust was measured in a lab by our team — claims are research-based from manufacturer specs and owner feedback."),
+  ],
+  picks: [
+    {
+      productSlug: "swiffer-duster",
+      tag: "Best overall", 
+      blurb: [P("The extendable static duster that reaches fans, blinds and shelving, traps dust on contact, and swivels along surfaces — the default above-floor duster for good reason.")],
+      pros: ["Static traps", "Extendable reach", "Swivel head", "Quick deploy"],
+      cons: ["Refill heads", "Dry dust only"],
+    },
+  ],
+  buyingGuide: [
+    P("Reach and head shape decide how well a duster works — angle to your actual ceiling height and blind spacing before settling on a length."),
+    P("Decide the refill rhythm: swap-away systems are convenient and quick; washable microfiber alternatives cost less over time but need laundering."),
+    P("The technique matters more than the brand: start high, move fast, and clean the head itself so dust doesn't drop behind."),
+  ],
+  methodology: [P("We compared dusters on reach, head design, static trapping and long-run cost from manufacturer documentation and user feedback. No lab testing was performed.")],
+  faqs: [
+    { q: "Do dusters actually remove dust?", a: "Yes — static fibres trap dust on contact; some will still fall behind, so clean head in the right place." },
+    { q: "Extendable or fixed?", a: "Extendable wins for any room with fans or tall bookshelves; fixed is simpler where reach is short." },
+    { q: "How do I clean the duster head?", a: "Rinse and air-dry the fibres or replace per the system — never shake inside the room it just cleaned." },
+  ],
+},
+{
+  slug: "best-scouring-pads",
+  title: "Best Scouring Pads & Erasers (2025)",
+  description: "The best water-activated erasers and scrub pads for scuffs, marks and baked-on residue.",
+  metaDescription: "The best scouring pads and erasers — melamine foam for scuffs vs scrub pads for baked-on residue, compared on abrasion and value.",
+  category: "scouring-pads",
+  intro: [
+    P("Liquid cleaners dissolve; abrasives remove. Scuffs, kick marks and baked-on residue are physical problems, and the right tool is a controlled abrasive: water-activated melamine foam for flat marks, non-scratch scrub pads for baked-on residue. This list is about choosing the right abrasion for the job."),
+    P("No surfaces were scoured in a lab by our team — claims are research-based from manufacturer specs and user feedback."),
+  ],
+  picks: [
+    {
+      productSlug: "mr-clean-magic-eraser",
+      tag: "Best for flat scuffs & marks",
+      blurb: [P("Water-activated melamine foam that lifts scuffs, kick marks and light stains from walls, doors and baseboards with no added chemistry — the famous mystery-mark tool.")],
+      pros: ["Works with water", "Lifts scuffs and marks", "Cheap multi-packs", "Phenomenal utility"],
+      cons: ["Abrasive — respect finishes", "Wears away", "Flat surfaces only"],
+    },
+    {
+      productSlug: "scotch-brite-scour-pads",
+      tag: "Best for baked-on residue",
+      blurb: [P("Durable non-scratch scrub pads for baked-on food, cooktop and tub grime — the reusable workhorse for three-dimensional residue.")],
+      pros: ["Shifts baked-on residue", "Non-scratch for most", "Reusable for weeks", "Cheap multi-packs"],
+      cons: ["Abrasive — spot test", "Physical work", "Not for delicate coatings"],
+    },
+    {
+      productSlug: "scrub-daddy",
+      tag: "Best temperature-smart scrub sponge",
+      blurb: [P("Scrub Daddy's texture turns firm in cold water and soft in warm, cleaning pots and pans without scratches — the smiley-face sponge with real scrubbing corners and a long-lasting build.")],
+      pros: ["Temperature-reactive texture", "Scrubbing corners", "Non-scratch on pans", "Long-wearing, washable"],
+      cons: ["Not for delicate silver", "Abrasiveness real on some finishes"],
+    },
+  ],
+  buyingGuide: [
+    P("Match the abrasive to the job: flat marks on painted walls answer to water-activated melamine foam; baked-on food and hard-water ring answer to a scrub pad with lather."),
+    P("Respect the finish: every abrasive is a controlled scratch — spot-test an inconspicuous corner and use light pressure on glossy or delicate surfaces."),
+    P("Count the real cost: foam blocks wear away (a consumable); scrub pads last weeks with proper rinsing. Compare cost-per-job, not price-per-pack."),
+  ],
+  methodology: [P("We compared the most-used erasers and scrub pads on abrasion, surface safety, durability and cost-per-job from manufacturer documentation and user feedback. No lab testing was performed.")],
+  faqs: [
+    { q: "Do erasers and scrub pads do the same thing?", a: "Largely different: foam lifts flat marks on stable surfaces; scrub pads shift baked-on residue with lather. Homes need both." },
+    { q: "Are these safe on all surfaces?", a: "No — every abrasive should be spot-tested and used lightly on glossy, coated or polished finishes." },
+    { q: "How do I get scuff marks off walls?", a: "Wet a melamine eraser, blot the mark off with light pressure, then wipe the wall dry." },
+  ],
+},
