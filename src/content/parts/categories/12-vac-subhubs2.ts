@@ -27,7 +27,8 @@
       "Wet/dry vacuum reviews and buying help — garage and workshop shop vacs for dust, liquids and automotive duty.",
     children: [],
     best: ["best-wet-dry-vacuums"],
-    guides: [],
+    guides: ["how-to-choose-a-wet-dry-vacuum"],
+    comparisons: ["shopvac-vs-ridgid-5gal"],
     featuredProducts: ["shopvac-5-gallon", "ryobi-18v-wetdry", "ridgid-5-gal-wetdry"],
     hubIntro: [
       "A wet/dry vac is a tool first, a vacuum second — choose for volume, hose reach and filter.",

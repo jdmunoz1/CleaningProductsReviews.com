@@ -27,7 +27,7 @@
       "Mop reviews — spin mops, steam mops, traditional mops and sweepers compared for hard floors.",
     children: [],
     best: ["best-mops"],
-    guides: ["steam-mop-vs-traditional-mop"],
+    guides: ["steam-mop-vs-traditional-mop", "how-to-mop-hard-floors"],
     comparisons: ["steam-vs-spin-mop"],
     featuredProducts: ["o-cel-o-spin-mop", "swiffer-sweeper", "libman-wonder-mop"],
     hubIntro: [

@@ -339,7 +339,8 @@ specialist: {
       "Wet/dry vacuum reviews and buying help — garage and workshop shop vacs for dust, liquids and automotive duty.",
     children: [],
     best: ["best-wet-dry-vacuums"],
-    guides: [],
+    guides: ["how-to-choose-a-wet-dry-vacuum"],
+    comparisons: ["shopvac-vs-ridgid-5gal"],
     featuredProducts: ["shopvac-5-gallon", "ryobi-18v-wetdry", "ridgid-5-gal-wetdry"],
     hubIntro: [
       "A wet/dry vac is a tool first, a vacuum second — choose for volume, hose reach and filter.",
@@ -380,7 +381,7 @@ specialist: {
     children: [],
     best: ["best-spot-cleaners"],
     guides: ["how-to-remove-pet-urine-smells"],
-    comparisons: ["carpet-cleaner-spot-vs-full"],
+    comparisons: ["carpet-cleaner-spot-vs-full", "bissell-little-green-vs-hoover-spotclean"],
     featuredProducts: ["bissell-little-green", "hoover-spotclean"],
     hubIntro: [
       "Cleaning the stain where it sits beats dragging the stain to the machine.",
@@ -585,7 +586,7 @@ specialist: {
       "Mop reviews — spin mops, steam mops, traditional mops and sweepers compared for hard floors.",
     children: [],
     best: ["best-mops"],
-    guides: ["steam-mop-vs-traditional-mop"],
+    guides: ["steam-mop-vs-traditional-mop", "how-to-mop-hard-floors"],
     comparisons: ["steam-vs-spin-mop"],
     featuredProducts: ["o-cel-o-spin-mop", "swiffer-sweeper", "libman-wonder-mop"],
     hubIntro: [
@@ -832,7 +833,7 @@ detergents: {
       "Eco laundry detergent reviews — plant-based liquids, fragrance-free formulas and plastic-free pods compared for green households.",
     children: [],
     best: ["best-eco-laundry-detergents", "best-detergents"],
-    guides: ["how-to-remove-tough-stains"],
+    guides: ["how-to-remove-tough-stains", "how-to-choose-an-eco-laundry-detergent"],
     comparisons: ["dropps-vs-ecover"],
     featuredProducts: ["ecover-laundry-liquid", "seventh-generation-free-clear", "dropps-laundry-pods"],
     hubIntro: [

@@ -8,7 +8,7 @@
       "Eco laundry detergent reviews — plant-based liquids, fragrance-free formulas and plastic-free pods compared for green households.",
     children: [],
     best: ["best-eco-laundry-detergents", "best-detergents"],
-    guides: ["how-to-remove-tough-stains"],
+    guides: ["how-to-remove-tough-stains", "how-to-choose-an-eco-laundry-detergent"],
     comparisons: ["dropps-vs-ecover"],
     featuredProducts: ["ecover-laundry-liquid", "seventh-generation-free-clear", "dropps-laundry-pods"],
     hubIntro: [

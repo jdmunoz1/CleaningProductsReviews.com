@@ -35,3 +35,5 @@ search-index.json
 
 # local config that should never be committed
 *.local.ts
+
+.vercel

@@ -31,7 +31,7 @@
     children: [],
     best: ["best-spot-cleaners"],
     guides: ["how-to-remove-pet-urine-smells"],
-    comparisons: ["carpet-cleaner-spot-vs-full"],
+    comparisons: ["carpet-cleaner-spot-vs-full", "bissell-little-green-vs-hoover-spotclean"],
     featuredProducts: ["bissell-little-green", "hoover-spotclean"],
     hubIntro: [
       "Cleaning the stain where it sits beats dragging the stain to the machine.",
