@@ -41,20 +41,6 @@
   updated: "2025-07-14",
 },
 {
-  slug: "dyson",
-  name: "Dyson",
-  short: "Flagship cordless and innovative machine engineering.",
-  intro: [
-    P("Dyson is the premium reference point in the vacuum world — famous for ball technology, cyclone separation and, more recently, laser-powered cordless machines with live particle counting. The brand commands a premium and the specs justify conversation if you use the features. This page collects our research-based thinking on the Dyson models we cover."),
-  ],
-  body: [
-    P("Dyson's engine: cyclone technology claims to maintain suction, and the V15 family adds laser floor detection plus a display that reveals dust you can't see. The honest framing: Dyson is best-in-class for the experience — the laser, the display, the build — if you can afford it."),
-    P("For pet homes, the hair screw tool and HEPA filter options matter more than the headline figures. For hard floors the laser slim head is the standout feature."),
-  ],
-  products: ["dyson-v15-detect", "dyson-v8-origin"],
-  updated: "2025-06-01",
-},
-{
   slug: "shark",
   name: "Shark",
   short: "Mainstream-value vacuums with self-cleaning tech and power at a friendly price.",

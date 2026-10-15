@@ -1,6 +1,6 @@
 {
   slug: "best-concentrate-and-refill-cleaners",
-  title: "Best Concentrates & Refill Cleaning Systems (2025)",
+  title: "Best Concentrates & Refill Cleaning Systems (2026)",
   description: "The best tablet cleaners, concentrate refills and reusable-bottle systems for cutting plastic while keeping surfaces clean.",
   metaDescription: "The best concentrate and refill cleaning systems — cleaner tablets and reusable-bottle refills that cut plastic while still cleaning.",
   category: "concentrates-and-refill-systems",

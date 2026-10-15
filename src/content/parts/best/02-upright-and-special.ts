@@ -1,6 +1,6 @@
 {
   slug: "best-upright-vacuums",
-  title: "Best Upright Vacuums (2025)",
+  title: "Best Upright Vacuums (2026)",
   description: "The best upright vacuums for carpet, pet hair and whole-home cleaning — value and power compared.",
   metaDescription: "Compare the best upright vacuums for carpet, pet hair and whole-home cleaning — suction, filtration and value judged honestly from research.",
   category: "vacuums",
@@ -52,7 +52,7 @@
 },
 {
   slug: "best-handheld-vacuums",
-  title: "Best Handheld Vacuums (2025)",
+  title: "Best Handheld Vacuums (2026)",
   description: "The best handheld vacuums for cars, stairs, crumbs and pet messes — cordless power that fits in a hand.",
   metaDescription: "The best handheld vacuums for cars, stairs, crumbs and pet messes — compared on suction, battery and value from research.",
   category: "vacuums",
@@ -83,7 +83,7 @@
 },
 {
   slug: "best-wet-dry-vacuums",
-  title: "Best Wet/Dry Shop Vacuums (2025)",
+  title: "Best Wet/Dry Shop Vacuums (2026)",
   description: "The best wet/dry shop vacuums for garages, workshops, cars and tough messes — corded and cordless compared.",
   metaDescription: "The best wet/dry shop vacuums for garage, workshop, car and spill cleaning — corded power and cordless convenience compared honestly.",
   category: "wetdry-vacuums",
@@ -128,7 +128,7 @@
 },
 {
   slug: "best-vacuum-for-pet-hair",
-  title: "Best Vacuum for Pet Hair (2025)",
+  title: "Best Vacuum for Pet Hair (2026)",
   description: "The best vacuums for pet hair — cordless, robot, upright and stick picks that survive fur, dander and the daily shed.",
   metaDescription: "The best vacuums for pet hair and dander — cordless, robot, upright and stick compared on tangle-proof brushrolls, suction and maintenance.",
   category: "vacuums",

@@ -1,6 +1,6 @@
 {
   slug: "best-carpet-cleaners",
-  title: "Best Carpet Cleaners (2025)",
+  title: "Best Carpet Cleaners (2026)",
   description: "The best carpet cleaners for pet stains, deep cleaning and rental-grade extraction — honestly compared.",
   metaDescription: "Research-based comparison of the best carpet cleaners for pet stains, deep cleaning and whole-room extraction — ProHeat, SpinScrub and rental-grade picks.",
   category: "carpet-cleaners",
@@ -60,7 +60,7 @@
 },
 {
   slug: "best-spot-cleaners",
-  title: "Best Portable Spot Cleaners (2025)",
+  title: "Best Portable Spot Cleaners (2026)",
   description: "The best portable spot cleaners for pet accidents, upholstery and car seats — extractors you carry to the mess.",
   metaDescription: "The best portable spot cleaners for pet accidents, upholstery, stairs and cars — compared on heat, portability and backup convenience.",
   category: "spot-cleaners",
@@ -98,7 +98,7 @@
 },
 {
   slug: "best-steam-mops",
-  title: "Best Steam Mops (2025)",
+  title: "Best Steam Mops (2026)",
   description: "The best steam mops and steam cleaners for sealed hard floors — chemical-free cleaning compared.",
   metaDescription: "The best steam mops and steam cleaners for sealed hard floors, grout and chemical-free households — compared on temperature, pads and value.",
   category: "steam-mops",
@@ -136,7 +136,7 @@
 },
 {
   slug: "best-pressure-washers",
-  title: "Best Pressure Washers (2025)",
+  title: "Best Pressure Washers (2026)",
   description: "The best pressure washers for cars, driveways and patios — electric power and value compared.",
   metaDescription: "The best pressure washers for cars, driveways and patios — electric PSI, detergent systems and value compared honestly from research.",
   category: "pressure-washers",

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { categories } from "@/content/categories";
 import { getCategory, getProduct, urlFor, getBest, getGuide, getComparison, fullUrl } from "@/lib/catalog";
 import { JsonLd } from "@/components/JsonLd";
+import { site } from "@/content/site";
+import { DEFAULT_OG_IMAGE, breadcrumbSchema } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -16,15 +18,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const cat = getCategory(slug);
   if (!cat) return {};
+  const title = `${cat.name} Reviews & Buying Guides`;
   return {
-    title: cat.name,
+    title,
     description: cat.metaDescription,
     alternates: { canonical: fullUrl("category", slug) },
     openGraph: {
-      title: cat.name,
+      title,
       description: cat.metaDescription,
       url: fullUrl("category", slug),
       type: "website",
+      images: [DEFAULT_OG_IMAGE],
     },
   };
 }
@@ -46,12 +50,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     name: cat.name,
     description: cat.description,
     url: fullUrl("category", slug),
-    isPartOf: { "@type": "WebSite", name: "CleaningProductsReviews.com", url: "https://www.cleaningproductsreviews.com" },
+    isPartOf: { "@id": `${site.domain}/#website` },
   };
+  const crumbs = breadcrumbSchema([
+    { name: "Home", url: site.domain },
+    { name: cat.name, url: fullUrl("category", slug) },
+  ]);
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-10">
       <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
       <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-accent-ink">Home</Link>
         <span className="mx-2">/</span>

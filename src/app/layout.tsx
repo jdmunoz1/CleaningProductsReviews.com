@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header, Footer } from "@/components/Site";
 import { site } from "@/content/site";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: site.name + " — " + site.tagline,
+    default: `Cleaning Product Reviews & Buying Guides | ${site.name}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     type: "website",
     locale: "en_US",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",

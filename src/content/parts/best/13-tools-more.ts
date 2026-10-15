@@ -1,6 +1,6 @@
 {
   slug: "best-dusters",
-  title: "Best Dusters (2025)",
+  title: "Best Dusters (2026)",
   description: "The best extendable dusters for ceiling fans, blinds and above-floor dust — static reach compared.",
   metaDescription: "The best dusters for ceiling fans, blinds and shelving — extendable static dusters compared on reach and refill cost.",
   category: "dusters",
@@ -31,7 +31,7 @@
 },
 {
   slug: "best-scouring-pads",
-  title: "Best Scouring Pads & Erasers (2025)",
+  title: "Best Scouring Pads & Erasers (2026)",
   description: "The best water-activated erasers and scrub pads for scuffs, marks and baked-on residue.",
   metaDescription: "The best scouring pads and erasers — melamine foam for scuffs vs scrub pads for baked-on residue, compared on abrasion and value.",
   category: "scouring-pads",

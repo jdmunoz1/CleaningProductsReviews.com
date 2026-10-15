@@ -541,6 +541,37 @@ await Promise.all(
   }),
 );
 
+/** Brand mark: teal tile with a white spray-bottle glyph. Used for favicon, apple icon and the schema logo. */
+const markSvg = (size: number, radius: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="${radius}" fill="#0e7490"/>
+  <path d="M22 28 Q22 23 27 22 L27 18 L37 18 L37 22 Q42 23 42 28 L42 50 Q42 53 39 53 L25 53 Q22 53 22 50 Z" fill="#ffffff"/>
+  <path d="M25 11 L39 11 Q41 11 41 13 L41 17 L25 17 Z" fill="#ffffff"/>
+  <rect x="17" y="12" width="9" height="3.5" rx="1.5" fill="#ffffff"/>
+  <rect x="26" y="33" width="12" height="10" rx="2" fill="#0e7490"/>
+</svg>
+`;
+writeFileSync(join(process.cwd(), "src/app/icon.svg"), markSvg(64, 14), "utf8");
+await sharp(Buffer.from(markSvg(180, 0))).png().toFile(join(process.cwd(), "src/app/apple-icon.png"));
+await sharp(Buffer.from(markSvg(512, 0))).png().toFile(join(ROOT, "logo.png"));
+
+/** Default share image (1200x630) for pages without a product image. */
+const ogPicks = ["dyson-v15-detect", "windex-original", "o-cel-o-spin-mop"]
+  .map((s) => products.find((p) => p.slug === s))
+  .filter((p): p is Product => !!p);
+const ogTiles = await Promise.all(ogPicks.map((p) => sharp(Buffer.from(productSvg(p))).resize(360, 270).png().toBuffer()));
+const ogBase = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect width="1200" height="12" fill="#0e7490"/>
+  <text x="80" y="140" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#1f2430">Cleaning<tspan fill="#0e7490">Products</tspan>Reviews.com</text>
+  <text x="80" y="200" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#5b6472">Independent reviews, comparisons and buying guides</text>
+  <text x="80" y="240" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#5b6472">for cleaning products, tools and machines.</text>
+  <rect x="64" y="300" width="1072" height="290" rx="18" fill="#f1f5f8"/>
+</svg>`;
+await sharp(Buffer.from(ogBase))
+  .composite(ogTiles.map((input, i) => ({ input, left: 80 + i * 360, top: 310 })))
+  .jpeg({ quality: 85, mozjpeg: true })
+  .toFile(join(ROOT, "og-default.jpg"));
+
 /** Author avatar */
 mkdirSync(join(ROOT, "images/authors"), { recursive: true });
 writeFileSync(

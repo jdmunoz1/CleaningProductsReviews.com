@@ -7,6 +7,8 @@ import { getBest, getProduct, urlFor, categoryName, fullUrl } from "@/lib/catalo
 import { affiliateUrl, merchants, EARNINGS_DISCLOSURE } from "@/content/merchants";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
+import { site } from "@/content/site";
+import { DEFAULT_OG_IMAGE, breadcrumbSchema, faqSchema, productOgImage } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -18,11 +20,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const b = getBest(slug);
   if (!b) return {};
+  const top = getProduct(b.picks[0]?.productSlug ?? "");
   return {
     title: b.title,
     description: b.metaDescription,
     alternates: { canonical: fullUrl("best", slug) },
-    openGraph: { title: b.title, description: b.metaDescription, url: fullUrl("best", slug), type: "article" },
+    openGraph: {
+      title: b.title,
+      description: b.metaDescription,
+      url: fullUrl("best", slug),
+      type: "article",
+      images: [top ? productOgImage(top.image, `Illustration of the ${top.name}`) : DEFAULT_OG_IMAGE],
+    },
   };
 }
 
@@ -45,10 +54,18 @@ export default async function BestPage({ params }: { params: Promise<{ slug: str
       item: fullUrl("review", p.productSlug),
     })),
   };
+  const crumbs = breadcrumbSchema([
+    { name: "Home", url: site.domain },
+    { name: categoryName(b.category), url: fullUrl("category", b.category) },
+    { name: b.title, url: fullUrl("best", slug) },
+  ]);
+  const faq = faqSchema(b.faqs);
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10">
       <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
+      {faq && <JsonLd data={faq} />}
       <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-accent-ink">Home</Link>
         <span className="mx-2">/</span>

@@ -1,6 +1,6 @@
 {
   slug: "best-green-all-purpose-cleaners",
-  title: "Best Green All-Purpose Cleaners (2025)",
+  title: "Best Green All-Purpose Cleaners (2026)",
   description: "The best plant-based sprays, concentrates and on-site systems for whole-home green cleaning.",
   metaDescription: "The best green all-purpose cleaners — plant-based sprays, concentrates and on-site cleaner systems compared for everyday strength.",
   category: "green-all-purpose-cleaners",
@@ -45,7 +45,7 @@
 },
 {
   slug: "best-eco-dish-and-tablets",
-  title: "Best Eco Dish Soaps & Dishwasher Pods (2025)",
+  title: "Best Eco Dish Soaps & Dishwasher Pods (2026)",
   description: "Plant-based dish liquids and low-plastic pods compared — the daily sink and machine swap done well.",
   metaDescription: "The best eco dish soaps and dishwasher pods — plant-based dish liquids, low-plastic pods and plastic-free tablets compared on grease-cut and price.",
   category: "eco-dish-soaps-and-pods",

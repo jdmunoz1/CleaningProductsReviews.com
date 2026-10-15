@@ -1,6 +1,6 @@
 {
   slug: "best-carpet-stain-removers",
-  title: "Best Carpet Stain Removers (2025)",
+  title: "Best Carpet Stain Removers (2026)",
   description: "The best carpet stain removers for coffee, food and unknown spots — sprays that lift without leaving a ring.",
   metaDescription: "The best carpet stain removers for coffee, food, pet and mystery stains — compared on formula, ease of use and water-based residue.",
   category: "carpet-stain-removers",
@@ -52,7 +52,7 @@
 },
 {
   slug: "best-kitchen-sprays",
-  title: "Best Kitchen Multi-Surface Sprays (2025)",
+  title: "Best Kitchen Multi-Surface Sprays (2026)",
   description: "The best kitchen sprays for grease, countertops and everyday messes — degreasers compared.",
   metaDescription: "The best kitchen multi-surface sprays for grease and grease-cutters, counters and everyday messes — compared on formula, scent and value.",
   category: "kitchen-sprays",
@@ -97,7 +97,7 @@
 },
 {
   slug: "best-stainless-steel-cleaners",
-  title: "Best Stainless Steel Cleaners (2025)",
+  title: "Best Stainless Steel Cleaners (2026)",
   description: "The best stainless steel cleaners for finger smudges and water spots — wipes and sprays compared.",
   metaDescription: "The best stainless steel cleaners and wipes for fingerprints, water spots and streak-free shine — compared on formula and convenience.",
   category: "stainless-steel-cleaners",
@@ -135,7 +135,7 @@
 },
 {
   slug: "best-shower-cleaners",
-  title: "Best Shower Cleaners (2025)",
+  title: "Best Shower Cleaners (2026)",
   description: "The best shower cleaners for soap scum and hard-water film on glass and tile — including daily no-scrub sprays.",
   metaDescription: "The best shower cleaners for soap scum and hard water on glass and tile, daily no-scrub sprays included. Compared on chemistry and value.",
   category: "shower-cleaners",
@@ -187,7 +187,7 @@
 },
 {
   slug: "best-toilet-cleaners",
-  title: "Best Toilet Bowl Cleaners (2025)",
+  title: "Best Toilet Bowl Cleaners (2026)",
   description: "The best toilet bowl cleaners for hard-water rings, grime and disinfection — thick-cling formulas compared.",
   metaDescription: "The best toilet bowl cleaners for hard water rings, bowl grime and daily disinfection — thick-cling gel formulas compared honestly.",
   category: "toilet-cleaners",

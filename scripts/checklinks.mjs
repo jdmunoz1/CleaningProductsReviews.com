@@ -57,6 +57,14 @@ for (const file of files) {
       continue;
     }
     if (href === "/") continue;
+    // Static files: /public files, app-dir metadata files (icon.svg, apple-icon.png)
+    // and static route handlers (llms.txt, emitted as .body), ignoring cache-busting queries.
+    const bare = href.split("?")[0];
+    if (
+      fs.existsSync(path.join("public", bare)) ||
+      fs.existsSync(path.join("src", "app", bare)) ||
+      fs.existsSync(path.join(appDir, bare + ".body"))
+    ) continue;
     if (!valid.has(href) && !valid.has(href.replace(/\/$/, "")) && !valid.has(href + "/")) {
       errPages++;
       console.log("MISSING PAGE:", route, "->", href);

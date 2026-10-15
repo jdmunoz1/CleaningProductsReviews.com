@@ -1,6 +1,6 @@
 {
   slug: "best-glass-cleaners",
-  title: "Best Glass & Window Cleaners (2025)",
+  title: "Best Glass & Window Cleaners (2026)",
   description: "Windex, Sprayway and residue-free formulas compared for streak-free windows and mirrors.",
   metaDescription: "The best glass and window cleaners — Windex, Sprayway and Stoner compared on streak-free finish, cling and value.",
   category: "glass-window-cleaners",
@@ -45,7 +45,7 @@
 },
 {
   slug: "best-wood-furniture-polish",
-  title: "Best Wood & Furniture Polish (2025)",
+  title: "Best Wood & Furniture Polish (2026)",
   description: "Aerosol polishes and lemon oils compared for finished wood, antiques and water-marked pieces.",
   metaDescription: "The best wood and furniture polish — Pledge, Old English and Weiman compared for dust-and-shine, conditioning and antiques.",
   category: "wood-and-furniture-polish",

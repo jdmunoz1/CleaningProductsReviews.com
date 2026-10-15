@@ -8,6 +8,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
 import { BrandWordmark } from "@/components/Site";
 import { ProductMini } from "@/components/ProductMini";
+import { site } from "@/content/site";
+import { DEFAULT_OG_IMAGE, breadcrumbSchema, productOgImage } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -19,11 +21,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const b = getBrand(slug);
   if (!b) return {};
+  const description = `${b.short} Research-based ${b.name} reviews, comparisons and buying advice.`;
+  const lead = getProduct(b.products[0] ?? "");
   return {
     title: `${b.name} Reviews`,
-    description: b.short,
+    description,
     alternates: { canonical: fullUrl("brand", slug) },
-    openGraph: { title: `${b.name} Reviews`, description: b.short, url: fullUrl("brand", slug), type: "profile" },
+    openGraph: {
+      title: `${b.name} Reviews`,
+      description,
+      url: fullUrl("brand", slug),
+      type: "profile",
+      images: [lead ? productOgImage(lead.image, `Illustration of the ${lead.name}`) : DEFAULT_OG_IMAGE],
+    },
   };
 }
 
@@ -46,10 +56,16 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
       url: fullUrl("brand", slug),
     },
   };
+  const crumbs = breadcrumbSchema([
+    { name: "Home", url: site.domain },
+    { name: "Brands", url: `${site.domain}/brands` },
+    { name: b.name, url: fullUrl("brand", slug) },
+  ]);
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10">
       <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
       <BrandWordmark />
       <h1 className="mt-4 prose-h">{b.name} — Reviews & Guide</h1>
       <p className="mt-3 text-lg leading-relaxed text-muted">{b.short}</p>

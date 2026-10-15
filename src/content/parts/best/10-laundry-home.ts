@@ -1,6 +1,6 @@
 {
   slug: "best-eco-laundry-detergents",
-  title: "Best Eco Laundry Detergents (2025)",
+  title: "Best Eco Laundry Detergents (2026)",
   description: "The best plant-based, fragrance-free and plastic-free laundry detergents — compared on formula, dosing and waste.",
   metaDescription: "The best eco laundry detergents — plant-based liquids, fragrance-free sensitive formulas and plastic-free pods compared from research.",
   category: "eco-laundry-detergents",

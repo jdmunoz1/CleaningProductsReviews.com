@@ -1,6 +1,6 @@
 {
   slug: "best-fabric-softeners-and-boosters",
-  title: "Best Fabric Softeners & Scent Boosters (2025)",
+  title: "Best Fabric Softeners & Scent Boosters (2026)",
   description: "The best fabric softeners and in-wash scent boosters for soft, fresh-smelling loads — compared on delivery format.",
   metaDescription: "The best fabric softeners and in-wash fragrance boosters for laundry — compared on format, scent intensity and value.",
   category: "fabric-softeners",
@@ -38,7 +38,7 @@
 },
 {
   slug: "best-washing-machine-cleaners",
-  title: "Best Washing Machine Cleaners (2025)",
+  title: "Best Washing Machine Cleaners (2026)",
   description: "The best washing machine cleaners for odour, residue and maintenance — tablets that keep machines fresh.",
   metaDescription: "The best washing machine cleaners for odour and residue — maintenance tablets compared on ease and effectiveness.",
   category: "washing-machine-cleaners",
@@ -69,7 +69,7 @@
 },
 {
   slug: "best-microfiber-cloths",
-  title: "Best Microfiber Cleaning Cloths (2025)",
+  title: "Best Microfiber Cleaning Cloths (2026)",
   description: "The best microfiber cloths and bundles for streak-free glass, dusting and colour-coded cleaning systems.",
   metaDescription: "The best microfiber cloth bundles for streak-free glass, dusting and colour-coded cleaning systems — compared on performance and value.",
   category: "microfiber-cloths",
@@ -107,7 +107,7 @@
 },
 {
   slug: "best-brooms",
-  title: "Best Brooms (2025)",
+  title: "Best Brooms (2026)",
   description: "The best brooms for indoor sweeping — angle, regular and dustpan-matched picks compared.",
   metaDescription: "The best brooms for indoor sweeping — angle bristles, dustpans and handling compared for hard floors.",
   category: "brooms",

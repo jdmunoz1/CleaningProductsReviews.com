@@ -1,6 +1,6 @@
 {
   slug: "best-eco-friendly-cleaners",
-  title: "Best Eco-Friendly Cleaners (2025)",
+  title: "Best Eco-Friendly Cleaners (2026)",
   description: "The best eco-friendly cleaners and systems for reducing plastic and chemicals without sacrificing results.",
   metaDescription: "The best eco-friendly cleaners, concentrates and electrolysed-cleaning systems — compared on efficacy, plastic impact and cost per clean.",
   category: "eco-friendly",
@@ -45,7 +45,7 @@
 },
 {
   slug: "best-mops",
-  title: "Best Mops (2025)",
+  title: "Best Mops (2026)",
   description: "The best mops for hard floors — spin mops, microfiber and wring-free machines compared.",
   metaDescription: "The best mops for sealed hard floors — hands-free spin mops, twist wringers and electric scrubbers compared on effort and value.",
   category: "mops",

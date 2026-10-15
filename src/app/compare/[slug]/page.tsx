@@ -6,6 +6,8 @@ import { getComparison, getProduct, urlFor, categoryName, fullUrl } from "@/lib/
 import { affiliateUrl, merchants, EARNINGS_DISCLOSURE } from "@/content/merchants";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
+import { site } from "@/content/site";
+import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productOgImage } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -17,11 +19,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const c = getComparison(slug);
   if (!c) return {};
+  const lead = getProduct(c.a.productSlug ?? "") ?? getProduct(c.b.productSlug ?? "");
   return {
     title: c.title,
     description: c.metaDescription,
     alternates: { canonical: fullUrl("compare", slug) },
-    openGraph: { title: c.title, description: c.metaDescription, url: fullUrl("compare", slug), type: "article" },
+    openGraph: {
+      title: c.title,
+      description: c.metaDescription,
+      url: fullUrl("compare", slug),
+      type: "article",
+      images: [lead ? productOgImage(lead.image, `Illustration of the ${lead.name}`) : DEFAULT_OG_IMAGE],
+    },
   };
 }
 
@@ -45,11 +54,23 @@ export default async function ComparisonPage({ params }: { params: Promise<{ slu
     ].filter(Boolean),
     mainEntityOfPage: fullUrl("compare", slug),
     articleSection: categoryName(c.category),
+    author: ORGANIZATION_REF,
+    publisher: ORGANIZATION,
+    datePublished: "2026-01-01",
+    dateModified: site.contentUpdated,
   };
+  const crumbs = breadcrumbSchema([
+    { name: "Home", url: site.domain },
+    { name: categoryName(c.category), url: fullUrl("category", c.category) },
+    { name: c.title, url: fullUrl("compare", slug) },
+  ]);
+  const faq = faqSchema(c.faqs);
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10">
       <JsonLd data={schema} />
+      <JsonLd data={crumbs} />
+      {faq && <JsonLd data={faq} />}
       <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-accent-ink">Home</Link>
         <span className="mx-2">/</span>

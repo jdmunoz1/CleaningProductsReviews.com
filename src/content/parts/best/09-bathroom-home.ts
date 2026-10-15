@@ -1,6 +1,6 @@
 {
   slug: "best-tile-grout-cleaners",
-  title: "Best Tile, Grout & Tub Cleaners (2025)",
+  title: "Best Tile, Grout & Tub Cleaners (2026)",
   description: "Foaming cleaners, mold removers and natural options for shower walls, tubs and grout — compared.",
   metaDescription: "The best tile, grout and tub cleaners — foaming bathroom cleaners, bleach-based mold removers and natural options compared on scum-cut.",
   category: "bathroom-tile-grout",
@@ -45,7 +45,7 @@
 },
 {
   slug: "best-limescale-removers",
-  title: "Best Limescale & Hard-Water Removers (2025)",
+  title: "Best Limescale & Hard-Water Removers (2026)",
   description: "CLR, Lime-A-Way and the acid-based descalers that actually dissolve hard-water deposits and rust.",
   metaDescription: "The best limescale and hard-water removers — CLR, Lime-A-Way and restoration pastes compared for showerheads, faucets and fixtures.",
   category: "limescale-removers",

@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
 import { ProductMini } from "@/components/ProductMini";
 import { estimateWords, dateFormatter } from "@/lib/utils";
+import { ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productImageUrl, productOgImage } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -23,15 +24,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const review = getReview(slug);
   const product = getProduct(slug);
   if (!review || !product) return {};
+  const description = `${product.tagline} Research-based review: strengths, weaknesses, value and alternatives.`;
   return {
     title: `${product.name} Review`,
-    description: product.tagline,
+    description,
     alternates: { canonical: fullUrl("review", slug) },
     openGraph: {
       title: `${product.name} Review | CleaningProductsReviews.com`,
-      description: product.tagline,
+      description,
       url: fullUrl("review", slug),
-      images: [{ url: site.domain + product.image.replace(/\.svg$/, ".jpg"), width: 1200, height: 900 }],
+      images: [productOgImage(product.image, `Illustration of the ${product.name}`)],
       type: "article",
     },
   };
@@ -62,34 +64,36 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     "@type": "Article",
     headline: `${product.name} Review`,
     description: product.tagline,
-    author: { "@type": "Organization", name: "CleaningProductsReviews.com" },
-    publisher: { "@type": "Organization", name: "CleaningProductsReviews.com" },
+    image: productImageUrl(product.image),
+    author: ORGANIZATION_REF,
+    publisher: ORGANIZATION,
     mainEntityOfPage: fullUrl("review", slug),
     datePublished: "2026-01-01",
-    dateModified: "2026-01-01",
-  };
-
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    brand: { "@type": "Brand", name: product.brand },
-    description: product.tagline,
-    image: site.domain + product.image.replace(/\.svg$/, ".jpg"),
-    aggregateRating: undefined,
-    offers: {
-      "@type": "Offer",
-      url: affiliateUrl(product.merchantId, product.productKey),
-      priceCurrency: "USD",
-      price: undefined,
-      availability: "https://schema.org/InStock",
+    dateModified: site.contentUpdated,
+    // The product is described via `about` rather than a standalone Product
+    // item: we publish no price or star rating, and a top-level Product without
+    // offers/review/aggregateRating is flagged invalid in Search Console.
+    about: {
+      "@type": "Product",
+      name: product.name,
+      brand: { "@type": "Brand", name: product.brand },
+      description: product.tagline,
+      image: productImageUrl(product.image),
     },
   };
+
+  const crumbs = breadcrumbSchema([
+    { name: "Home", url: site.domain },
+    { name: categoryName(product.category), url: fullUrl("category", product.category) },
+    { name: product.name, url: fullUrl("review", slug) },
+  ]);
+  const faq = faqSchema(review.faqs);
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-10">
       <JsonLd data={articleSchema} />
-      <JsonLd data={productSchema} />
+      <JsonLd data={crumbs} />
+      {faq && <JsonLd data={faq} />}
 
       <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-accent-ink">Home</Link>

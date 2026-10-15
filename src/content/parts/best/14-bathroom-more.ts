@@ -1,6 +1,6 @@
 {
   slug: "best-drain-cleaners",
-  title: "Best Drain Cleaners (2025)",
+  title: "Best Drain Cleaners (2026)",
   description: "The best chemical drain cleaners for slow drains, hair clogs and plumbing gunk — gels and liquids compared.",
   metaDescription: "The best drain cleaners for slow drains — thick gels and bleach-powered formulas for hair and soap clogs, compared on reach and safety.",
   category: "drain-cleaners",

@@ -106,6 +106,7 @@ export function inventory(): InventoryEntry[] {
       title: g.title,
       description: g.metaDescription,
       category: g.category,
+      updated: g.updated,
     });
   }
   for (const b of brands) {
@@ -116,6 +117,7 @@ export function inventory(): InventoryEntry[] {
       title: `${b.name} Reviews`,
       description: b.short,
       category: undefined,
+      updated: b.updated,
     });
   }
   return entries;

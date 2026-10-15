@@ -1,8 +1,8 @@
 {
   slug: "best-pet-hair-removal-tools",
-  title: "Best Pet Hair Removal Tools (2025)",
+  title: "Best Pet Hair Removal Tools (2026)",
   description: "The best reusable rollers and rubber brushes for pet hair — friction tools that lift fur from sofa, car seats and carpet without sticky refills.",
-  metaDescription: "Best pet hair removal tools for 2025 — reusable rollers and rubber brushes that lift fur and dander from sofa, car seats and carpet without sticky tape refills.",
+  metaDescription: "Best pet hair removal tools for 2026 — reusable rollers and rubber brushes that lift fur and dander from sofa, car seats and carpet without sticky tape refills.",
   category: "pet-hair-removal-tools",
   intro: [
     P("Pet hair is a mechanical problem, so the honest answer is a mechanical tool: friction that grabs fur and dander from fabric without a power cord or a roll of sticky sheets. The selection weighs reach into carpet pile, sheer ease on furniture, and the cost of owning the tool over a year."),
@@ -38,7 +38,7 @@
 },
 {
   slug: "best-pet-odour-removers",
-  title: "Best Pet Odour Removers (2025)",
+  title: "Best Pet Odour Removers (2026)",
   description: "The best sprays and concentrates for general pet smells — citrus neutralisers and fabric refreshers compared.",
   metaDescription: "Best pet odour removers for sofa, bedding and litter-box smells — citrus neutralisers and fabric refreshers compared on scent, strength and value.",
   category: "pet-odour-removers",

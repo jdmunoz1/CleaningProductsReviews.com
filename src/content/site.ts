@@ -13,6 +13,8 @@ export const site = {
   heroTitle: "Find the Cleaning Products That Actually Work",
   email: "hello@cleaningproductsreviews.com",
   founded: 2026,
+  /** Last site-wide content revision; sitemap lastmod for pages without their own `updated` date. */
+  contentUpdated: "2026-10-15",
   genre: ["ProductReviews", "BuyingGuides", "ComparisonShopping"],
   organization: {
     name: "CleaningProductsReviews.com Editorial Team",

@@ -1,6 +1,6 @@
 {
   slug: "best-cordless-vacuums",
-  title: "Best Cordless Stick Vacuums (2025)",
+  title: "Best Cordless Stick Vacuums (2026)",
   description: "The best cordless stick vacuums for hard floors, carpet and pet hair — compared by the features that actually matter.",
   metaDescription: "Research-based comparison of the best cordless stick vacuums for hard floors, carpet and pet hair. Battery, suction, filtration and floor range compared honestly.",
   category: "cordless-vacuums",
@@ -52,7 +52,7 @@
 },
 {
   slug: "best-robot-vacuums",
-  title: "Best Robot Vacuums (2025)",
+  title: "Best Robot Vacuums (2026)",
   description: "The best robot vacuums and vacuums-with-mops, rated for mapping, self-emptying and pet-friendly pickup.",
   metaDescription: "Find the best robot vacuum — self-emptying, mapping, vacuum-mop combos compared honestly by features, navigation and pet-friendliness.",
   category: "robot-vacuums",
@@ -97,7 +97,7 @@
 },
 {
   slug: "best-canister-vacuums",
-  title: "Best Canister Vacuums (2025)",
+  title: "Best Canister Vacuums (2026)",
   description: "The best canister vacuums for hardwood, tile and allergy households — bagged vs bagless power compared.",
   metaDescription: "The best canister vacuums for hardwood, tile, under-furniture reach and allergy households. Compared honestly on power, filtration and ergonomics.",
   category: "vacuums",

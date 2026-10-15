@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { guides } from "@/content/guides";
-import { getGuide, relatedHref, fullUrl } from "@/lib/catalog";
+import { getGuide, relatedHref, fullUrl, getCategory, categoryName, urlFor } from "@/lib/catalog";
 import { EARNINGS_DISCLOSURE } from "@/content/merchants";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
+import { site } from "@/content/site";
+import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -21,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: g.title,
     description: g.metaDescription,
     alternates: { canonical: fullUrl("guide", slug) },
-    openGraph: { title: g.title, description: g.metaDescription, url: fullUrl("guide", slug), type: "article" },
+    openGraph: { title: g.title, description: g.metaDescription, url: fullUrl("guide", slug), type: "article", images: [DEFAULT_OG_IMAGE] },
   };
 }
 
@@ -37,13 +39,37 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     description: g.metaDescription,
     url: fullUrl("guide", slug),
     mainEntityOfPage: fullUrl("guide", slug),
-    articleSection: g.category,
+    articleSection: categoryName(g.category),
+    image: DEFAULT_OG_IMAGE.url,
+    author: ORGANIZATION_REF,
+    publisher: ORGANIZATION,
+    datePublished: g.updated,
     dateModified: g.updated,
   };
+  const cat = getCategory(g.category);
+  const trail = [
+    { name: "Home", url: site.domain },
+    ...(cat ? [{ name: cat.name, url: fullUrl("category", cat.slug) }] : []),
+    { name: g.title, url: fullUrl("guide", slug) },
+  ];
+  const faq = faqSchema(g.faqs);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
       <JsonLd data={schema} />
+      <JsonLd data={breadcrumbSchema(trail)} />
+      {faq && <JsonLd data={faq} />}
+      <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
+        <Link href="/" className="hover:text-accent-ink">Home</Link>
+        {cat && (
+          <>
+            <span className="mx-2">/</span>
+            <Link href={urlFor("category", cat.slug)} className="hover:text-accent-ink">{cat.name}</Link>
+          </>
+        )}
+        <span className="mx-2">/</span>
+        <span className="text-ink">{g.title}</span>
+      </nav>
       <p className="text-xs font-bold uppercase tracking-widest text-accent-ink">Buying guide</p>
       <h1 className="mt-1 prose-h">{g.title}</h1>
       <p className="mt-3 text-lg leading-relaxed text-muted">{g.description}</p>

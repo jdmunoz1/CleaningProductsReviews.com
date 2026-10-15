@@ -8,6 +8,14 @@ import { site } from "@/content/site";
 import { urlFor, productName } from "@/lib/catalog";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
+import { ORGANIZATION, ORGANIZATION_REF } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  description:
+    "Independent, research-based reviews, comparisons and buying guides for vacuums, carpet cleaners, mops, sprays, laundry and pet cleaning products.",
+  alternates: { canonical: "/" },
+};
 
 /** Top-level hubs only (no `children` of any parent). */
 const hubs = Object.values(categories).filter((c) => !Object.values(categories).some((p) => p.children.includes(c.slug)));
@@ -17,15 +25,18 @@ export default function HomePage() {
   const list = bestLists.slice(0, 6);
 
   const homeSchema = {
-    "@type": "WebSite",
-    name: site.name,
-    description: site.description,
-    url: site.domain,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${site.domain}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${site.domain}/#website`,
+        name: site.name,
+        description: site.description,
+        url: site.domain,
+        publisher: ORGANIZATION_REF,
+      },
+      ORGANIZATION,
+    ],
   };
 
   return (

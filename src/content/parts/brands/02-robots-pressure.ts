@@ -13,7 +13,7 @@
   updated: "2025-06-01",
 },
 {
-  slug: "iRobot",
+  slug: "irobot",
   name: "iRobot",
   short: "The Roomba brand — the original robot vacuum, still a pioneer.",
   intro: [

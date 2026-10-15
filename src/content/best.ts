@@ -3,7 +3,7 @@ const P = (text: string): Block => ({ type: "p", text });
 export const bestLists: BestList[] = [
 {
   slug: "best-cordless-vacuums",
-  title: "Best Cordless Stick Vacuums (2025)",
+  title: "Best Cordless Stick Vacuums (2026)",
   description: "The best cordless stick vacuums for hard floors, carpet and pet hair — compared by the features that actually matter.",
   metaDescription: "Research-based comparison of the best cordless stick vacuums for hard floors, carpet and pet hair. Battery, suction, filtration and floor range compared honestly.",
   category: "cordless-vacuums",
@@ -55,7 +55,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-robot-vacuums",
-  title: "Best Robot Vacuums (2025)",
+  title: "Best Robot Vacuums (2026)",
   description: "The best robot vacuums and vacuums-with-mops, rated for mapping, self-emptying and pet-friendly pickup.",
   metaDescription: "Find the best robot vacuum — self-emptying, mapping, vacuum-mop combos compared honestly by features, navigation and pet-friendliness.",
   category: "robot-vacuums",
@@ -100,7 +100,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-canister-vacuums",
-  title: "Best Canister Vacuums (2025)",
+  title: "Best Canister Vacuums (2026)",
   description: "The best canister vacuums for hardwood, tile and allergy households — bagged vs bagless power compared.",
   metaDescription: "The best canister vacuums for hardwood, tile, under-furniture reach and allergy households. Compared honestly on power, filtration and ergonomics.",
   category: "vacuums",
@@ -138,7 +138,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-upright-vacuums",
-  title: "Best Upright Vacuums (2025)",
+  title: "Best Upright Vacuums (2026)",
   description: "The best upright vacuums for carpet, pet hair and whole-home cleaning — value and power compared.",
   metaDescription: "Compare the best upright vacuums for carpet, pet hair and whole-home cleaning — suction, filtration and value judged honestly from research.",
   category: "vacuums",
@@ -190,7 +190,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-handheld-vacuums",
-  title: "Best Handheld Vacuums (2025)",
+  title: "Best Handheld Vacuums (2026)",
   description: "The best handheld vacuums for cars, stairs, crumbs and pet messes — cordless power that fits in a hand.",
   metaDescription: "The best handheld vacuums for cars, stairs, crumbs and pet messes — compared on suction, battery and value from research.",
   category: "vacuums",
@@ -221,7 +221,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-wet-dry-vacuums",
-  title: "Best Wet/Dry Shop Vacuums (2025)",
+  title: "Best Wet/Dry Shop Vacuums (2026)",
   description: "The best wet/dry shop vacuums for garages, workshops, cars and tough messes — corded and cordless compared.",
   metaDescription: "The best wet/dry shop vacuums for garage, workshop, car and spill cleaning — corded power and cordless convenience compared honestly.",
   category: "wetdry-vacuums",
@@ -266,7 +266,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-vacuum-for-pet-hair",
-  title: "Best Vacuum for Pet Hair (2025)",
+  title: "Best Vacuum for Pet Hair (2026)",
   description: "The best vacuums for pet hair — cordless, robot, upright and stick picks that survive fur, dander and the daily shed.",
   metaDescription: "The best vacuums for pet hair and dander — cordless, robot, upright and stick compared on tangle-proof brushrolls, suction and maintenance.",
   category: "vacuums",
@@ -318,7 +318,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-carpet-cleaners",
-  title: "Best Carpet Cleaners (2025)",
+  title: "Best Carpet Cleaners (2026)",
   description: "The best carpet cleaners for pet stains, deep cleaning and rental-grade extraction — honestly compared.",
   metaDescription: "Research-based comparison of the best carpet cleaners for pet stains, deep cleaning and whole-room extraction — ProHeat, SpinScrub and rental-grade picks.",
   category: "carpet-cleaners",
@@ -378,7 +378,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-spot-cleaners",
-  title: "Best Portable Spot Cleaners (2025)",
+  title: "Best Portable Spot Cleaners (2026)",
   description: "The best portable spot cleaners for pet accidents, upholstery and car seats — extractors you carry to the mess.",
   metaDescription: "The best portable spot cleaners for pet accidents, upholstery, stairs and cars — compared on heat, portability and backup convenience.",
   category: "spot-cleaners",
@@ -416,7 +416,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-steam-mops",
-  title: "Best Steam Mops (2025)",
+  title: "Best Steam Mops (2026)",
   description: "The best steam mops and steam cleaners for sealed hard floors — chemical-free cleaning compared.",
   metaDescription: "The best steam mops and steam cleaners for sealed hard floors, grout and chemical-free households — compared on temperature, pads and value.",
   category: "steam-mops",
@@ -454,7 +454,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-pressure-washers",
-  title: "Best Pressure Washers (2025)",
+  title: "Best Pressure Washers (2026)",
   description: "The best pressure washers for cars, driveways and patios — electric power and value compared.",
   metaDescription: "The best pressure washers for cars, driveways and patios — electric PSI, detergent systems and value compared honestly from research.",
   category: "pressure-washers",
@@ -499,7 +499,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-carpet-stain-removers",
-  title: "Best Carpet Stain Removers (2025)",
+  title: "Best Carpet Stain Removers (2026)",
   description: "The best carpet stain removers for coffee, food and unknown spots — sprays that lift without leaving a ring.",
   metaDescription: "The best carpet stain removers for coffee, food, pet and mystery stains — compared on formula, ease of use and water-based residue.",
   category: "carpet-stain-removers",
@@ -551,7 +551,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-kitchen-sprays",
-  title: "Best Kitchen Multi-Surface Sprays (2025)",
+  title: "Best Kitchen Multi-Surface Sprays (2026)",
   description: "The best kitchen sprays for grease, countertops and everyday messes — degreasers compared.",
   metaDescription: "The best kitchen multi-surface sprays for grease and grease-cutters, counters and everyday messes — compared on formula, scent and value.",
   category: "kitchen-sprays",
@@ -596,7 +596,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-stainless-steel-cleaners",
-  title: "Best Stainless Steel Cleaners (2025)",
+  title: "Best Stainless Steel Cleaners (2026)",
   description: "The best stainless steel cleaners for finger smudges and water spots — wipes and sprays compared.",
   metaDescription: "The best stainless steel cleaners and wipes for fingerprints, water spots and streak-free shine — compared on formula and convenience.",
   category: "stainless-steel-cleaners",
@@ -634,7 +634,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-shower-cleaners",
-  title: "Best Shower Cleaners (2025)",
+  title: "Best Shower Cleaners (2026)",
   description: "The best shower cleaners for soap scum and hard-water film on glass and tile — including daily no-scrub sprays.",
   metaDescription: "The best shower cleaners for soap scum and hard water on glass and tile, daily no-scrub sprays included. Compared on chemistry and value.",
   category: "shower-cleaners",
@@ -686,7 +686,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-toilet-cleaners",
-  title: "Best Toilet Bowl Cleaners (2025)",
+  title: "Best Toilet Bowl Cleaners (2026)",
   description: "The best toilet bowl cleaners for hard-water rings, grime and disinfection — thick-cling formulas compared.",
   metaDescription: "The best toilet bowl cleaners for hard water rings, bowl grime and daily disinfection — thick-cling gel formulas compared honestly.",
   category: "toilet-cleaners",
@@ -731,7 +731,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-pet-urine-removers",
-  title: "Best Pet Urine & Odour Removers (2025)",
+  title: "Best Pet Urine & Odour Removers (2026)",
   description: "The best enzyme cleaners for pet urine, stains and odours — source-destroying formulas compared.",
   metaDescription: "The best enzyme pet stain and odour removers for urine, old accidents and repeat marking — compared on strength and value.",
   category: "pet-urine-removers",
@@ -769,7 +769,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-eco-friendly-cleaners",
-  title: "Best Eco-Friendly Cleaners (2025)",
+  title: "Best Eco-Friendly Cleaners (2026)",
   description: "The best eco-friendly cleaners and systems for reducing plastic and chemicals without sacrificing results.",
   metaDescription: "The best eco-friendly cleaners, concentrates and electrolysed-cleaning systems — compared on efficacy, plastic impact and cost per clean.",
   category: "eco-friendly",
@@ -814,7 +814,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-mops",
-  title: "Best Mops (2025)",
+  title: "Best Mops (2026)",
   description: "The best mops for hard floors — spin mops, microfiber and wring-free machines compared.",
   metaDescription: "The best mops for sealed hard floors — hands-free spin mops, twist wringers and electric scrubbers compared on effort and value.",
   category: "mops",
@@ -949,7 +949,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-detergents",
-  title: "Best Laundry Detergents (2025)",
+  title: "Best Laundry Detergents (2026)",
   description: "The best laundry detergents for odour removal, HE machines and stain-fighting families — compared honestly.",
   "metaDescription": "The best laundry detergents for HE washers, odour removal and tough stains — compared on formula, scent and value from research.",
   "category": "detergents",
@@ -1000,7 +1000,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-laundry-stain-removers",
-  title: "Best Laundry Stain Removers (2025)",
+  title: "Best Laundry Stain Removers (2026)",
   description: "The best laundry stain removers and treatment sprays for set-in marks, collar grime and tough patches.",
   metaDescription: "The best laundry stain removers and treatment sprays for set-in marks, collars and patches — compared on strength and ease of use.",
   category: "stain-removers",
@@ -1038,7 +1038,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-fabric-softeners-and-boosters",
-  title: "Best Fabric Softeners & Scent Boosters (2025)",
+  title: "Best Fabric Softeners & Scent Boosters (2026)",
   description: "The best fabric softeners and in-wash scent boosters for soft, fresh-smelling loads — compared on delivery format.",
   metaDescription: "The best fabric softeners and in-wash fragrance boosters for laundry — compared on format, scent intensity and value.",
   category: "fabric-softeners",
@@ -1076,7 +1076,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-washing-machine-cleaners",
-  title: "Best Washing Machine Cleaners (2025)",
+  title: "Best Washing Machine Cleaners (2026)",
   description: "The best washing machine cleaners for odour, residue and maintenance — tablets that keep machines fresh.",
   metaDescription: "The best washing machine cleaners for odour and residue — maintenance tablets compared on ease and effectiveness.",
   category: "washing-machine-cleaners",
@@ -1107,7 +1107,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-microfiber-cloths",
-  title: "Best Microfiber Cleaning Cloths (2025)",
+  title: "Best Microfiber Cleaning Cloths (2026)",
   description: "The best microfiber cloths and bundles for streak-free glass, dusting and colour-coded cleaning systems.",
   metaDescription: "The best microfiber cloth bundles for streak-free glass, dusting and colour-coded cleaning systems — compared on performance and value.",
   category: "microfiber-cloths",
@@ -1145,7 +1145,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-brooms",
-  title: "Best Brooms (2025)",
+  title: "Best Brooms (2026)",
   description: "The best brooms for indoor sweeping — angle, regular and dustpan-matched picks compared.",
   metaDescription: "The best brooms for indoor sweeping — angle bristles, dustpans and handling compared for hard floors.",
   category: "brooms",
@@ -1183,7 +1183,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-green-all-purpose-cleaners",
-  title: "Best Green All-Purpose Cleaners (2025)",
+  title: "Best Green All-Purpose Cleaners (2026)",
   description: "The best plant-based sprays, concentrates and on-site systems for whole-home green cleaning.",
   metaDescription: "The best green all-purpose cleaners — plant-based sprays, concentrates and on-site cleaner systems compared for everyday strength.",
   category: "green-all-purpose-cleaners",
@@ -1228,7 +1228,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-eco-dish-and-tablets",
-  title: "Best Eco Dish Soaps & Dishwasher Pods (2025)",
+  title: "Best Eco Dish Soaps & Dishwasher Pods (2026)",
   description: "Plant-based dish liquids and low-plastic pods compared — the daily sink and machine swap done well.",
   metaDescription: "The best eco dish soaps and dishwasher pods — plant-based dish liquids, low-plastic pods and plastic-free tablets compared on grease-cut and price.",
   category: "eco-dish-soaps-and-pods",
@@ -1280,7 +1280,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-tile-grout-cleaners",
-  title: "Best Tile, Grout & Tub Cleaners (2025)",
+  title: "Best Tile, Grout & Tub Cleaners (2026)",
   description: "Foaming cleaners, mold removers and natural options for shower walls, tubs and grout — compared.",
   metaDescription: "The best tile, grout and tub cleaners — foaming bathroom cleaners, bleach-based mold removers and natural options compared on scum-cut.",
   category: "bathroom-tile-grout",
@@ -1325,7 +1325,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-limescale-removers",
-  title: "Best Limescale & Hard-Water Removers (2025)",
+  title: "Best Limescale & Hard-Water Removers (2026)",
   description: "CLR, Lime-A-Way and the acid-based descalers that actually dissolve hard-water deposits and rust.",
   metaDescription: "The best limescale and hard-water removers — CLR, Lime-A-Way and restoration pastes compared for showerheads, faucets and fixtures.",
   category: "limescale-removers",
@@ -1370,7 +1370,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-eco-laundry-detergents",
-  title: "Best Eco Laundry Detergents (2025)",
+  title: "Best Eco Laundry Detergents (2026)",
   description: "The best plant-based, fragrance-free and plastic-free laundry detergents — compared on formula, dosing and waste.",
   metaDescription: "The best eco laundry detergents — plant-based liquids, fragrance-free sensitive formulas and plastic-free pods compared from research.",
   category: "eco-laundry-detergents",
@@ -1415,7 +1415,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-glass-cleaners",
-  title: "Best Glass & Window Cleaners (2025)",
+  title: "Best Glass & Window Cleaners (2026)",
   description: "Windex, Sprayway and residue-free formulas compared for streak-free windows and mirrors.",
   metaDescription: "The best glass and window cleaners — Windex, Sprayway and Stoner compared on streak-free finish, cling and value.",
   category: "glass-window-cleaners",
@@ -1460,7 +1460,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-wood-furniture-polish",
-  title: "Best Wood & Furniture Polish (2025)",
+  title: "Best Wood & Furniture Polish (2026)",
   description: "Aerosol polishes and lemon oils compared for finished wood, antiques and water-marked pieces.",
   metaDescription: "The best wood and furniture polish — Pledge, Old English and Weiman compared for dust-and-shine, conditioning and antiques.",
   category: "wood-and-furniture-polish",
@@ -1504,9 +1504,9 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-pet-hair-removal-tools",
-  title: "Best Pet Hair Removal Tools (2025)",
+  title: "Best Pet Hair Removal Tools (2026)",
   description: "The best reusable rollers and rubber brushes for pet hair — friction tools that lift fur from sofa, car seats and carpet without sticky refills.",
-  metaDescription: "Best pet hair removal tools for 2025 — reusable rollers and rubber brushes that lift fur and dander from sofa, car seats and carpet without sticky tape refills.",
+  metaDescription: "Best pet hair removal tools for 2026 — reusable rollers and rubber brushes that lift fur and dander from sofa, car seats and carpet without sticky tape refills.",
   category: "pet-hair-removal-tools",
   intro: [
     P("Pet hair is a mechanical problem, so the honest answer is a mechanical tool: friction that grabs fur and dander from fabric without a power cord or a roll of sticky sheets. The selection weighs reach into carpet pile, sheer ease on furniture, and the cost of owning the tool over a year."),
@@ -1542,7 +1542,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-pet-odour-removers",
-  title: "Best Pet Odour Removers (2025)",
+  title: "Best Pet Odour Removers (2026)",
   description: "The best sprays and concentrates for general pet smells — citrus neutralisers and fabric refreshers compared.",
   metaDescription: "Best pet odour removers for sofa, bedding and litter-box smells — citrus neutralisers and fabric refreshers compared on scent, strength and value.",
   category: "pet-odour-removers",
@@ -1580,7 +1580,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-dusters",
-  title: "Best Dusters (2025)",
+  title: "Best Dusters (2026)",
   description: "The best extendable dusters for ceiling fans, blinds and above-floor dust — static reach compared.",
   metaDescription: "The best dusters for ceiling fans, blinds and shelving — extendable static dusters compared on reach and refill cost.",
   category: "dusters",
@@ -1611,7 +1611,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-scouring-pads",
-  title: "Best Scouring Pads & Erasers (2025)",
+  title: "Best Scouring Pads & Erasers (2026)",
   description: "The best water-activated erasers and scrub pads for scuffs, marks and baked-on residue.",
   metaDescription: "The best scouring pads and erasers — melamine foam for scuffs vs scrub pads for baked-on residue, compared on abrasion and value.",
   category: "scouring-pads",
@@ -1656,7 +1656,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-drain-cleaners",
-  title: "Best Drain Cleaners (2025)",
+  title: "Best Drain Cleaners (2026)",
   description: "The best chemical drain cleaners for slow drains, hair clogs and plumbing gunk — gels and liquids compared.",
   metaDescription: "The best drain cleaners for slow drains — thick gels and bleach-powered formulas for hair and soap clogs, compared on reach and safety.",
   category: "drain-cleaners",
@@ -1694,7 +1694,7 @@ export const bestLists: BestList[] = [
 },
 {
   slug: "best-concentrate-and-refill-cleaners",
-  title: "Best Concentrates & Refill Cleaning Systems (2025)",
+  title: "Best Concentrates & Refill Cleaning Systems (2026)",
   description: "The best tablet cleaners, concentrate refills and reusable-bottle systems for cutting plastic while keeping surfaces clean.",
   metaDescription: "The best concentrate and refill cleaning systems — cleaner tablets and reusable-bottle refills that cut plastic while still cleaning.",
   category: "concentrates-and-refill-systems",

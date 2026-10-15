@@ -1,6 +1,6 @@
 {
   slug: "best-detergents",
-  title: "Best Laundry Detergents (2025)",
+  title: "Best Laundry Detergents (2026)",
   description: "The best laundry detergents for odour removal, HE machines and stain-fighting families — compared honestly.",
   "metaDescription": "The best laundry detergents for HE washers, odour removal and tough stains — compared on formula, scent and value from research.",
   "category": "detergents",
@@ -51,7 +51,7 @@
 },
 {
   slug: "best-laundry-stain-removers",
-  title: "Best Laundry Stain Removers (2025)",
+  title: "Best Laundry Stain Removers (2026)",
   description: "The best laundry stain removers and treatment sprays for set-in marks, collar grime and tough patches.",
   metaDescription: "The best laundry stain removers and treatment sprays for set-in marks, collars and patches — compared on strength and ease of use.",
   category: "stain-removers",
