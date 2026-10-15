@@ -30,17 +30,18 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="/search" className="hidden rounded-md border border-line px-3 py-1.5 text-sm font-medium text-muted hover:border-accent hover:text-accent-ink sm:inline">
+          <Link href="/search" className="hidden min-h-10 items-center rounded-md border border-line px-3 text-sm font-medium text-muted transition-colors hover:border-accent hover:text-accent-ink sm:inline-flex">
             Search
           </Link>
-          <Link href="/reviews" className="rounded-md bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:bg-accent-ink">
+          <Link href="/reviews" className="inline-flex min-h-10 items-center rounded-md bg-accent px-3 text-sm font-semibold text-white transition-colors hover:bg-accent-ink">
             All Reviews
           </Link>
         </div>
       </div>
-      <nav className="flex gap-4 overflow-x-auto border-t border-line px-4 py-2 lg:hidden" aria-label="Secondary">
-        {utility.map((item) => (
-          <Link key={item.href} href={item.href} className="flex-none text-xs font-medium text-muted hover:text-accent-ink">
+      {/* Below lg the primary category nav is hidden, so the scroll strip carries both sets. */}
+      <nav className="flex gap-1 overflow-x-auto border-t border-line px-2 lg:hidden" aria-label="Secondary">
+        {[...utility, ...primary].map((item) => (
+          <Link key={item.href} href={item.href} className="inline-flex min-h-11 flex-none items-center px-2 text-sm font-medium text-muted hover:text-accent-ink">
             {item.label}
           </Link>
         ))}
@@ -60,20 +61,20 @@ export function Footer() {
         <div className="mt-8 grid gap-10 sm:grid-cols-3">
           <nav aria-label="Legal">
             <p className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">Legal</p>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1 text-sm">
               {legal.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted hover:text-accent-ink">{l.label}</Link>
+                  <Link href={l.href} className="inline-block py-1.5 text-muted hover:text-accent-ink">{l.label}</Link>
                 </li>
               ))}
             </ul>
           </nav>
           <nav aria-label="Explore">
             <p className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">Explore</p>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1 text-sm">
               {explore.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted hover:text-accent-ink">{l.label}</Link>
+                  <Link href={l.href} className="inline-block py-1.5 text-muted hover:text-accent-ink">{l.label}</Link>
                 </li>
               ))}
             </ul>

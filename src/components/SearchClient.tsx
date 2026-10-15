@@ -61,7 +61,7 @@ export function SearchClient({ entries }: { entries: SearchEntry[] }) {
           placeholder="e.g. cordless vacuum, carpet cleaner, pet hair…"
           autoComplete="off"
           autoCapitalize="off"
-          className="w-full rounded-xl border border-line bg-paper px-5 py-4 text-base text-ink outline-none placeholder:text-muted focus:border-accent"
+          className="w-full rounded-xl border border-line bg-paper px-5 py-4 text-base text-ink outline-none placeholder:text-muted focus:border-accent focus:ring-2 focus:ring-accent/30"
         />
       </form>
 

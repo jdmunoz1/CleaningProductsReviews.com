@@ -109,7 +109,7 @@ export function ProductFinderClient() {
                 <h3 className="mt-0.5 font-semibold text-ink group-hover:text-accent-ink">{p.name}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-muted">{p.tagline}</p>
               </div>
-              <span className="flex-none text-accent-ink">→</span>
+              <span aria-hidden className="flex-none text-accent-ink">→</span>
             </Link>
           ))}
         </div>
@@ -136,7 +136,8 @@ function Option({ children, active, onClick }: { children: React.ReactNode; acti
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-lg border px-4 py-3 text-left text-sm font-medium transition ${
+      aria-pressed={active}
+      className={`min-h-11 rounded-lg border px-4 py-3 text-left text-sm font-medium transition ${
         active
           ? "border-accent bg-accent-soft text-accent-ink"
           : "border-line bg-paper text-ink hover:border-accent"

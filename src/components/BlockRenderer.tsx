@@ -74,7 +74,9 @@ function InlineRelated({ type, slug }: { type: "best" | "guide" | "compare"; slu
   const rel = resolve(type, slug);
   return (
     <Link href={rel.url} className="mt-2 inline-flex items-center gap-2 rounded-md border border-line bg-paper-soft px-3 py-2 text-sm font-medium text-accent-ink hover:bg-accent-soft">
-      {type === "best" ? "🏆 Best list" : type === "compare" ? "⚖️ Comparison" : "📖 Guide"}
+      <span className="rounded bg-accent-soft px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-accent-ink">
+        {type === "best" ? "Best list" : type === "compare" ? "Comparison" : "Guide"}
+      </span>
       <span className="font-semibold">{slug.split("-").join(" ")}</span>
       <span aria-hidden>→</span>
     </Link>
