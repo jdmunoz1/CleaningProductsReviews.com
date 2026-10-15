@@ -2,12 +2,11 @@ import type { Product } from "./types";
 
 /**
  * Central product catalog (Phase 1). One source of truth for every product
- * referenced anywhere on the site. Merchant tokens are placeholders (`pld-`)
- * because this site cannot register affiliate programs by itself — replace each
- * `productKey` with the merchant's real token (e.g. Amazon ASIN) in this single
- * file before launch. No other file holds merchant links. See README.
+ * referenced anywhere on the site. `productKey` defaults to "<brand> <name>",
+ * which merchants.ts turns into a tagged Amazon search link. Pass a real ASIN
+ * (e.g. "B0XXXXXXXX") as the last argument to get a direct /dp/ link instead.
+ * No other file holds merchant links.
  */
-let bucket = 1000;
 const p = (
   slug: string,
   name: string,
@@ -19,7 +18,7 @@ const p = (
   idealFor: string[],
   merchantId: string = "amazon",
   priceNote: string = "Retailers change pricing often — check the current price at the retailer.",
-  productKey = `pld-${++bucket}`,
+  productKey = name.toLowerCase().includes(brand.toLowerCase()) ? name : `${brand} ${name}`,
 ): Product => ({ slug, name, brand, category, tagline, image: `/images/products/${slug}.svg`, merchantId, productKey, kind, features, idealFor, priceNote });
 
 export const products: Product[] = [
@@ -265,7 +264,7 @@ export const products: Product[] = [
       "Strong suction for its size on sawdust and spills",
     ],
     ["garages", "cars", "workshops", "quick cleanups", "boats", "RVs"],
-    "homeDepot",
+    "amazon",
     "Battery sold separately — confirm the current kit price.",
   ),
 
