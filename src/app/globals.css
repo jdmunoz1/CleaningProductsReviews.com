@@ -47,9 +47,10 @@ summary {
   cursor: pointer;
 }
 
-.prose-h h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
-.prose-h h2 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); font-weight: 700; margin-top: 2.2rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; line-height: 1.2; }
-.prose-h h3 { font-size: 1.15rem; font-weight: 700; margin-top: 1.6rem; margin-bottom: 0.4rem; line-height: 1.3; }
+/* Pages put .prose-h on the heading itself, so match both forms. */
+.prose-h h1, h1.prose-h { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.prose-h h2, h2.prose-h { font-size: clamp(1.35rem, 2.4vw, 1.7rem); font-weight: 700; margin-top: 2.2rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; line-height: 1.2; }
+.prose-h h3, h3.prose-h.h3 { font-size: 1.15rem; font-weight: 700; margin-top: 1.6rem; margin-bottom: 0.4rem; line-height: 1.3; }
 
 .prose-body p { margin: 0.9rem 0; line-height: 1.7; color: color-mix(in srgb, var(--color-ink) 92%, transparent); }
 .prose-body ul, .prose-body ol { margin: 0.9rem 0 0.9rem 1.15rem; }

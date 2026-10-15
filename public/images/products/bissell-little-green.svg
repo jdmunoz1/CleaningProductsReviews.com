@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Bissell Little Green ProHeat — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Bissell Little Green ProHeat">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(163, 48%, 92%)"/>
-      <stop offset="1" stop-color="hsl(203, 42%, 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(163, 34%, 99%)"/>
-      <stop offset="1" stop-color="hsl(163, 30%, 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e6f3e9"/><stop offset="1" stop-color="#e6f3e9" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#77be88"/><stop offset="0.45" stop-color="#2e9b48"/><stop offset="1" stop-color="#1e652f"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#e6f3e9" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(163, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(233, 40%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(163, 30%, 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(163, 45%, 28%)">Bissell</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(163, 35%, 40%)">Bissell Little Green ProHeat</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(163, 45%, 92%)" stroke="hsl(163, 40%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(163, 45%, 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(163, 30%, 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.15) translate(-600 -770)"><ellipse cx="610" cy="776" rx="220" ry="19.8" fill="#0f172a" opacity="0.13"/>
+  <path d="M480 470 Q520 380 600 380 Q680 380 720 470" stroke="url(#g-dark)" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <rect x="460" y="460" width="280" height="305" rx="40" fill="url(#g-body)"/>
+  <rect x="480" y="480" width="110" height="160" rx="26" fill="url(#g-water)"/>
+  <rect x="476" y="478" width="26" height="270" rx="13" fill="url(#g-shine)"/>
+  <circle cx="800" cy="640" r="70" fill="none" stroke="#374151" stroke-width="18"/>
+  <circle cx="800" cy="640" r="44" fill="none" stroke="#4b5563" stroke-width="16"/>
+  <rect x="770" y="720" width="90" height="46" rx="12" fill="url(#g-plastic)"/>
+  <text x="600" y="690" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="38.0" fill="#ffffff">Bissell</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

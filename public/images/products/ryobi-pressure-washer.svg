@@ -1,21 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Ryobi 3x QUIET Electric Pressure Washer — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Ryobi 3x QUIET Electric Pressure Washer">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(200, 35%, 93%)"/>
-      <stop offset="1" stop-color="hsl(200, 32%, 85%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(200, 30%, 99%)"/>
-      <stop offset="1" stop-color="hsl(200, 26%, 95%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f5f6e0"/><stop offset="1" stop-color="#f5f6e0" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c6d159"/><stop offset="0.45" stop-color="#a8b800"/><stop offset="1" stop-color="#6d7800"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#f5f6e0" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(200, 40%, 80%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(200, 42%, 82%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(200, 35%, 72%)" stroke-width="2"/>
-  <text x="600" y="350" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" fill="hsl(200, 60%, 26%)">Ryobi</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" fill="hsl(200, 50%, 36%)">3x QUIET Electric Pressure Washer</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(200, 40%, 92%)" stroke="hsl(200, 38%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(200, 55%, 28%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(200, 40%, 42%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1) translate(-600 -770)"><ellipse cx="620" cy="776" rx="230" ry="20.7" fill="#0f172a" opacity="0.13"/>
+  <circle cx="380" cy="560" r="80" fill="none" stroke="#1f2937" stroke-width="14"/>
+  <circle cx="380" cy="560" r="56" fill="none" stroke="#374151" stroke-width="12"/>
+  <path d="M440 600 Q460 700 500 720" stroke="#1f2937" stroke-width="12" fill="none"/>
+  <rect x="640" y="190" width="24" height="220" rx="10" fill="url(#g-dark)"/>
+  <rect x="610" y="180" width="110" height="34" rx="16" fill="url(#g-dark)"/>
+  <rect x="470" y="380" width="260" height="350" rx="40" fill="url(#g-body)"/>
+  <rect x="486" y="400" width="26" height="310" rx="13" fill="url(#g-shine)"/>
+  <rect x="510" y="440" width="120" height="70" rx="14" fill="url(#g-dark)"/>
+  <circle cx="700" cy="728" r="42" fill="url(#g-dark)"/><circle cx="700" cy="728" r="16.8" fill="#9ca3af"/>
+  <rect x="470" y="740" width="40" height="28" rx="6" fill="#374151"/>
+  <path d="M800 300 L860 760" stroke="url(#g-metal)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M780 280 L840 280 L830 340 L800 340 Z" fill="url(#g-dark)"/>
+  <text x="600" y="620" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="46.0" fill="#1f2430">Ryobi</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

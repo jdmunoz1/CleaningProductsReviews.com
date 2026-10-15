@@ -37,3 +37,4 @@ search-index.json
 *.local.ts
 
 .vercel
+.gstack/

@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="O-Cedar EasyWring Spin Mop — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the O-Cedar EasyWring Spin Mop">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(194, 48%, 92%)"/>
-      <stop offset="1" stop-color="hsl(234, 42%, 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(194, 34%, 99%)"/>
-      <stop offset="1" stop-color="hsl(194, 30%, 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f8e5e5"/><stop offset="1" stop-color="#f8e5e5" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#da7373"/><stop offset="0.45" stop-color="#c62828"/><stop offset="1" stop-color="#811a1a"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#f8e5e5" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(194, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(264, 40%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(194, 30%, 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(194, 45%, 28%)">O-Cedar</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(194, 35%, 40%)">O-Cedar EasyWring Spin Mop</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(194, 45%, 92%)" stroke="hsl(194, 40%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(194, 45%, 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(194, 30%, 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1) translate(-600 -770)"><ellipse cx="600" cy="776" rx="210" ry="18.9" fill="#0f172a" opacity="0.13"/>
+  <path d="M640 520 L700 120" stroke="url(#g-metal)" stroke-width="22" stroke-linecap="round"/>
+  <rect x="684" y="96" width="40" height="80" rx="16" fill="#c62828" transform="rotate(8 704 136)"/>
+  <path d="M430 520 L770 520 L740 750 Q736 765 716 765 L484 765 Q464 765 460 750 Z" fill="url(#g-body)"/>
+  <ellipse cx="600" cy="520" rx="170" ry="30" fill="#811a1a"/>
+  <ellipse cx="640" cy="514" rx="96" ry="20" fill="#f1f5f9"/>
+  <path d="M560 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M570 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M580 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M590 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M600 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M610 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M620 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M630 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/><path d="M640 512 q-6 10 0 18" stroke="#cbd5e1" stroke-width="5" fill="none"/>
+  <rect x="452" y="540" width="26" height="200" rx="13" fill="url(#g-shine)"/>
+  <text x="600" y="650" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="46.0" fill="#ffffff">O-Cedar</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

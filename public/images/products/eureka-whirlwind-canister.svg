@@ -1,21 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Eureka WhirlWind Canister Vacuum — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Eureka WhirlWind Bagless Canister">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(220, 40%, 92%)"/>
-      <stop offset="1" stop-color="hsl(220, 35%, 82%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(220, 30%, 99%)"/>
-      <stop offset="1" stop-color="hsl(220, 25%, 95%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f6e4e4"/><stop offset="1" stop-color="#f6e4e4" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d06b6b"/><stop offset="0.45" stop-color="#b71c1c"/><stop offset="1" stop-color="#771212"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#f6e4e4" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(220, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(220, 45%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(220, 35%, 72%)" stroke-width="2"/>
-  <text x="600" y="350" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="100" font-weight="700" fill="hsl(220, 55%, 26%)">Eureka</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(220, 45%, 36%)">WhirlWind Bagless Canister</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(220, 40%, 92%)" stroke="hsl(220, 38%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(220, 50%, 30%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(220, 40%, 42%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1) translate(-600 -770)"><ellipse cx="640" cy="776" rx="330" ry="29.7" fill="#0f172a" opacity="0.13"/>
+  <path d="M520 600 Q560 420 700 340" stroke="url(#g-dark)" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <path d="M700 340 L850 735" stroke="url(#g-metal)" stroke-width="20" stroke-linecap="round"/>
+  <rect x="790" y="728" width="160" height="40" rx="16" fill="url(#g-dark)"/>
+  <path d="M300 690 Q300 520 470 520 Q620 520 620 650 L620 700 Q620 765 560 765 L360 765 Q300 765 300 700 Z" fill="url(#g-body)"/>
+  <ellipse cx="420" cy="580" rx="70" ry="26" fill="#ffffff" opacity="0.25"/>
+  <circle cx="570" cy="735" r="36" fill="url(#g-dark)"/><circle cx="570" cy="735" r="14.4" fill="#9ca3af"/>
+  <text x="440" y="680" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="40.0" fill="#ffffff">Eureka</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

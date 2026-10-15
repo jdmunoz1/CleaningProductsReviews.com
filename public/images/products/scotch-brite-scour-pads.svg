@@ -1,21 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Scotch-Brite Scour Pads — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Scotch-Brite Scour Pads">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(210 48% 92%)"/>
-      <stop offset="1" stop-color="hsl(30 42% 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(20 34% 99%)"/>
-      <stop offset="1" stop-color="hsl(20 30% 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e6efe6"/><stop offset="1" stop-color="#e6efe6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#77ab7a"/><stop offset="0.45" stop-color="#2e7d32"/><stop offset="1" stop-color="#1e5121"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#e6efe6" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(210 40% 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(30 40% 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(20 30% 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(200 45% 28%)">Scotch-Brite</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(200 35% 40%)">Scotch-Brite Scour Pads</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(200 45% 92%)" stroke="hsl(200 40% 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(200 45% 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(200 30% 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.4) translate(-600 -770)"><ellipse cx="600" cy="776" rx="220" ry="19.8" fill="#0f172a" opacity="0.13"/>
+  <rect x="410" y="690" width="360" height="70" rx="14" fill="#267a31"/><rect x="430" y="634" width="360" height="70" rx="14" fill="#3aa346"/><rect x="450" y="578" width="360" height="70" rx="14" fill="#2f8f3a"/>
+  <path d="M460 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M476 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M492 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M508 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M524 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M540 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M556 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M572 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M588 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M604 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M620 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M636 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M652 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M668 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M684 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M700 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M716 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M732 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M748 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M764 590 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M460 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M476 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M492 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M508 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M524 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M540 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M556 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M572 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M588 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M604 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M620 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M636 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M652 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M668 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M684 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M700 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M716 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M732 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M748 616 l8 6" stroke="#1b5e20" stroke-width="3"/><path d="M764 616 l8 6" stroke="#1b5e20" stroke-width="3"/>
+  <rect x="490" y="420" width="240" height="96" rx="14" fill="#ffffff"/>
+  <text x="610" y="468" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="28.1" fill="#2e7d32">Scotch-Brite</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

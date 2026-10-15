@@ -1,21 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Swiffer Duster — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Swiffer Duster">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(200 48% 92%)"/>
-      <stop offset="1" stop-color="hsl(235 42% 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(210 34% 99%)"/>
-      <stop offset="1" stop-color="hsl(210 30% 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e6efe6"/><stop offset="1" stop-color="#e6efe6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#77ab7a"/><stop offset="0.45" stop-color="#2e7d32"/><stop offset="1" stop-color="#1e5121"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#e6efe6" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(200 40% 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(235 40% 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(210 30% 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(195 45% 28%)">Swiffer</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(195 35% 40%)">Swiffer Duster</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(195 45% 92%)" stroke="hsl(195 40% 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(195 45% 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(195 30% 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1) translate(-600 -770)"><ellipse cx="600" cy="776" rx="150" ry="14" fill="#0f172a" opacity="0.13"/>
+  <rect x="588" y="430" width="24" height="330" rx="10" fill="url(#g-body)"/>
+  <rect x="576" y="640" width="48" height="126" rx="18" fill="url(#g-body)"/>
+  <ellipse cx="690" cy="300" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="686" cy="337" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="676" cy="370" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="659" cy="398" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="637" cy="418" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="613" cy="429" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="587" cy="429" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="563" cy="418" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="541" cy="398" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="524" cy="370" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="514" cy="337" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="510" cy="300" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="514" cy="263" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="524" cy="230" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="541" cy="202" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="563" cy="182" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="587" cy="171" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="613" cy="171" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="637" cy="182" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="659" cy="202" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="676" cy="230" rx="46" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/><ellipse cx="686" cy="263" rx="46" ry="34" fill="#e6efe6" stroke="#e2e8f0" stroke-width="2"/>
+  <ellipse cx="600" cy="300" rx="90" ry="130" fill="#e6efe6"/>
+  <rect x="660" y="660" width="150" height="56" rx="12" fill="#ffffff"/>
+  <text x="735" y="688" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="29.8" fill="#2e7d32">Swiffer</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

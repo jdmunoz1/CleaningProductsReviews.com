@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Shout Advanced Gel — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Shout Advanced Gel">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(110, 48%, 92%)"/>
-      <stop offset="1" stop-color="hsl(150, 42%, 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(110, 34%, 99%)"/>
-      <stop offset="1" stop-color="hsl(110, 30%, 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fae6e6"/><stop offset="1" stop-color="#fae6e6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e27878"/><stop offset="0.45" stop-color="#d32f2f"/><stop offset="1" stop-color="#891f1f"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#fae6e6" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(110, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(180, 40%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(110, 30%, 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(110, 45%, 28%)">Shout</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(110, 35%, 40%)">Shout Advanced Gel</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(110, 45%, 92%)" stroke="hsl(110, 40%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(110, 45%, 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(110, 30%, 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.2) translate(-600 -770)"><ellipse cx="600" cy="776" rx="120" ry="14" fill="#0f172a" opacity="0.13"/>
+  <path d="M520 360 Q520 300 570 290 L570 255 L630 255 L630 290 Q680 300 680 360 L680 735 Q680 765 650 765 L550 765 Q520 765 520 735 Z" fill="url(#g-body)"/>
+  <rect x="532" y="370" width="26" height="370" rx="13" fill="url(#g-shine)"/>
+  <rect x="560" y="200" width="80" height="62" rx="12" fill="url(#g-plastic)"/>
+  <rect x="582" y="186" width="36" height="20" rx="6" fill="#cfd4db"/>
+  <rect x="532" y="450" width="136" height="210" rx="14" fill="#ffffff" opacity="0.96"/>
+  <rect x="550" y="626" width="100" height="8" rx="4" fill="#d32f2f" opacity="0.85"/>
+  <rect x="550" y="606" width="60" height="6" rx="3" fill="#d32f2f" opacity="0.35"/>
+  <text x="600" y="531" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34.3" fill="#d32f2f">Shout</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

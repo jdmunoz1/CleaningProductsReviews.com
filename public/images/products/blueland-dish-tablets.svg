@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Blueland Dish Tablets — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Blueland Dish Tablets">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(274, 48%, 92%)"/>
-      <stop offset="1" stop-color="hsl(314, 42%, 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(274, 34%, 99%)"/>
-      <stop offset="1" stop-color="hsl(274, 30%, 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e4eefa"/><stop offset="1" stop-color="#e4eefa" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6da1e6"/><stop offset="0.45" stop-color="#1e6fd9"/><stop offset="1" stop-color="#14488d"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#e4eefa" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(274, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(344, 40%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(274, 30%, 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(274, 45%, 28%)">Blueland</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(274, 35%, 40%)">Blueland Dish Tablets</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(274, 45%, 92%)" stroke="hsl(274, 40%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(274, 45%, 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(274, 30%, 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.12) translate(-600 -770)"><ellipse cx="620" cy="776" rx="220" ry="19.8" fill="#0f172a" opacity="0.13"/>
+  <path d="M460 290 L700 290 L716 700 Q718 765 660 765 L500 765 Q442 765 444 700 Z" fill="url(#g-body)"/>
+  <rect x="460" y="290" width="240" height="34" fill="#14488d" opacity="0.35"/>
+  <rect x="476" y="340" width="26" height="380" rx="13" fill="url(#g-shine)"/>
+  <rect x="488" y="400" width="184" height="210" rx="14" fill="#ffffff" opacity="0.96"/>
+  <rect x="506" y="576" width="148" height="8" rx="4" fill="#1e6fd9" opacity="0.85"/>
+  <rect x="506" y="556" width="88.8" height="6" rx="3" fill="#1e6fd9" opacity="0.35"/>
+  <text x="580" y="481" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="30.7" fill="#1e6fd9">Blueland</text>
+  <ellipse cx="760" cy="742" rx="36" ry="24" fill="#ffffff" stroke="#d7dce3" stroke-width="3"/><ellipse cx="760" cy="738" rx="22" ry="10" fill="#e4eefa"/><ellipse cx="830" cy="742" rx="36" ry="24" fill="#ffffff" stroke="#d7dce3" stroke-width="3"/><ellipse cx="830" cy="738" rx="22" ry="10" fill="#e4eefa"/><ellipse cx="795" cy="700" rx="36" ry="24" fill="#ffffff" stroke="#d7dce3" stroke-width="3"/><ellipse cx="795" cy="696" rx="22" ry="10" fill="#e4eefa"/></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

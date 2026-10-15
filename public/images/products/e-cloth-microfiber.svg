@@ -1,21 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="E-Cloth Microfiber Cloth — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the E-Cloth General Purpose Microfiber Cloths">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(165, 40%, 92%)"/>
-      <stop offset="1" stop-color="hsl(165, 35%, 82%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(165, 30%, 99%)"/>
-      <stop offset="1" stop-color="hsl(165, 25%, 95%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e4f1fc"/><stop offset="1" stop-color="#e4f1fc" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6db2ee"/><stop offset="0.45" stop-color="#1e88e5"/><stop offset="1" stop-color="#145895"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#e4f1fc" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(165, 40%, 76%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(165, 45%, 78%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(165, 35%, 72%)" stroke-width="2"/>
-  <text x="600" y="355" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="105" font-weight="700" fill="hsl(165, 55%, 22%)">E-Cloth</text>
-  <text x="600" y="455" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(165, 45%, 34%)">Microfiber Cloths</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(165, 40%, 92%)" stroke="hsl(165, 38%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(165, 50%, 28%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(165, 40%, 40%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.35) translate(-600 -770)"><ellipse cx="600" cy="776" rx="240" ry="21.599999999999998" fill="#0f172a" opacity="0.13"/>
+  <rect x="380" y="700" width="440" height="66" rx="20" fill="#145895"/>
+  <rect x="394" y="648" width="440" height="62" rx="20" fill="#1e88e5"/>
+  <rect x="408" y="596" width="440" height="62" rx="20" fill="#6db2ee"/>
+  <circle cx="430" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="456" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="482" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="508" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="534" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="560" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="586" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="612" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="638" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="664" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="690" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="716" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="742" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="768" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="794" cy="614" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="430" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="456" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="482" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="508" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="534" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="560" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="586" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="612" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="638" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="664" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="690" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="716" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="742" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="768" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/><circle cx="794" cy="636" r="2.5" fill="#ffffff" opacity="0.4"/>
+  <rect x="520" y="440" width="200" height="110" rx="14" fill="#ffffff"/>
+  <text x="620" y="495" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="39.4" fill="#1e88e5">E-Cloth</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

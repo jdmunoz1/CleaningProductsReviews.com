@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Ryobi ONE+ 3-Gal Wet/Dry Vac — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Ryobi ONE+ 3-Gal Wet/Dry Vac">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(273, 48%, 92%)"/>
-      <stop offset="1" stop-color="hsl(313, 42%, 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(273, 34%, 99%)"/>
-      <stop offset="1" stop-color="hsl(273, 30%, 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f5f6e0"/><stop offset="1" stop-color="#f5f6e0" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c6d159"/><stop offset="0.45" stop-color="#a8b800"/><stop offset="1" stop-color="#6d7800"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#f5f6e0" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(273, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(343, 40%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(273, 30%, 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(273, 45%, 28%)">Ryobi</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(273, 35%, 40%)">Ryobi ONE+ 3-Gal Wet/Dry Vac</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(273, 45%, 92%)" stroke="hsl(273, 40%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(273, 45%, 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(273, 30%, 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.15) translate(-600 -770)"><ellipse cx="620" cy="776" rx="210" ry="18.9" fill="#0f172a" opacity="0.13"/>
+  <path d="M470 520 Q340 540 340 660 Q340 740 420 750" stroke="url(#g-dark)" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <rect x="400" y="742" width="120" height="26" rx="10" fill="#374151"/>
+  <rect x="470" y="420" width="290" height="320" rx="34" fill="url(#g-body)"/>
+  <rect x="488" y="440" width="30" height="280" rx="15" fill="url(#g-shine)"/>
+  <rect x="450" y="340" width="330" height="96" rx="44" fill="url(#g-dark)"/>
+  <path d="M560 340 Q615 270 670 340" stroke="#374151" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <circle cx="500" cy="752" r="18" fill="url(#g-dark)"/><circle cx="500" cy="752" r="7.2" fill="#9ca3af"/><circle cx="730" cy="752" r="18" fill="url(#g-dark)"/><circle cx="730" cy="752" r="7.2" fill="#9ca3af"/>
+  <text x="615" y="560" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="46.0" fill="#1f2430">Ryobi</text></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

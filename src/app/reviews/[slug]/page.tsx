@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${product.name} Review | CleaningProductsReviews.com`,
       description: product.tagline,
       url: fullUrl("review", slug),
-      images: [{ url: site.domain + product.image }],
+      images: [{ url: site.domain + product.image.replace(/\.svg$/, ".jpg"), width: 1200, height: 900 }],
       type: "article",
     },
   };
@@ -75,7 +75,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     name: product.name,
     brand: { "@type": "Brand", name: product.brand },
     description: product.tagline,
-    image: fullUrl("review", slug) + product.image,
+    image: site.domain + product.image.replace(/\.svg$/, ".jpg"),
     aggregateRating: undefined,
     offers: {
       "@type": "Offer",
@@ -109,7 +109,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
           <Image
             src={product.image}
-            alt={product.name}
+            alt={`Illustration of the ${product.name}`}
             width={1440}
             height={1080}
             className="mt-6 aspect-[4/3] w-full rounded-xl object-cover"
@@ -184,7 +184,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             <h2 className="font-bold">At a glance</h2>
             <dl className="mt-3 space-y-2 text-sm">
               <div className="flex justify-between gap-3"><dt className="text-muted">Category</dt><dd>{categoryName(product.category)}</dd></div>
-              <div className="flex justify-between gap-3"><dt className="text-muted">Colour</dt><dd className="capitalize">{product.kind}</dd></div>
+              <div className="flex justify-between gap-3"><dt className="text-muted">Type</dt><dd className="capitalize">{product.kind}</dd></div>
               <div className="flex justify-between gap-3"><dt className="text-muted">Read time</dt><dd>~{Math.max(1, Math.round(words / 200))} min</dd></div>
             </dl>
             <a

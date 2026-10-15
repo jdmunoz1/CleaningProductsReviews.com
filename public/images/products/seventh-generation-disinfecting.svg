@@ -1,21 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Seventh Generation Disinfecting Spray — placeholder image">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Illustration of the Seventh Generation Disinfecting Spray">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="hsl(344, 48%, 92%)"/>
-      <stop offset="1" stop-color="hsl(24, 42%, 86%)"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="hsl(344, 34%, 99%)"/>
-      <stop offset="1" stop-color="hsl(344, 30%, 96%)"/>
-    </linearGradient>
+    <linearGradient id="g-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f6"/></linearGradient>
+    <radialGradient id="g-halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#e6efe6"/><stop offset="1" stop-color="#e6efe6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#77ab7a"/><stop offset="0.45" stop-color="#2e7d32"/><stop offset="1" stop-color="#1e5121"/></linearGradient>
+    <linearGradient id="g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbfbfc"/><stop offset="0.5" stop-color="#eceef1"/><stop offset="1" stop-color="#c9ced6"/></linearGradient>
+    <linearGradient id="g-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b5563"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f3f4f6"/><stop offset="0.5" stop-color="#a7adb7"/><stop offset="1" stop-color="#d7dbe0"/></linearGradient>
+    <linearGradient id="g-clear" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#e6efe6" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4ec" stop-opacity="0.75"/><stop offset="1" stop-color="#2f8fcf" stop-opacity="0.85"/></linearGradient>
+    <linearGradient id="g-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <circle cx="1040" cy="140" r="220" fill="hsl(344, 40%, 78%)" opacity="0.5"/>
-  <circle cx="140" cy="780" r="260" fill="hsl(54, 40%, 80%)" opacity="0.45"/>
-  <rect x="200" y="180" rx="28" width="800" height="540" fill="url(#card)" stroke="hsl(344, 30%, 72%)" stroke-width="2"/>
-  <text x="600" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="hsl(344, 45%, 28%)">Seventh Generation</text>
-  <text x="600" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="hsl(344, 35%, 40%)">Seventh Generation Disinfecting Spray</text>
-  <rect x="200" y="640" rx="14" width="300" height="60" fill="hsl(344, 45%, 92%)" stroke="hsl(344, 40%, 80%)"/>
-  <text x="350" y="678" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="hsl(344, 45%, 34%)">Review · Compare</text>
-  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="hsl(344, 30%, 46%)">Placeholder illustration</text>
+  <rect width="1200" height="900" fill="url(#g-bg)"/>
+  <circle cx="600" cy="470" r="400" fill="url(#g-halo)"/>
+  <rect x="0" y="790" width="1200" height="110" fill="#e6ebf0"/>
+  <g transform="translate(600 770) scale(1.15) translate(-600 -770)"><ellipse cx="600" cy="776" rx="150" ry="14" fill="#0f172a" opacity="0.13"/>
+  <path d="M480 420 Q480 350 548 340 L548 300 L652 300 L652 340 Q720 350 720 420 L720 740 Q720 765 695 765 L505 765 Q480 765 480 740 Z" fill="url(#g-body)"/>
+  <rect x="492" y="430" width="36" height="300" rx="18" fill="url(#g-shine)"/>
+  <rect x="502" y="470" width="196" height="200" rx="14" fill="#ffffff" opacity="0.96"/>
+  <rect x="520" y="636" width="160" height="8" rx="4" fill="#2e7d32" opacity="0.85"/>
+  <rect x="520" y="616" width="96" height="6" rx="3" fill="#2e7d32" opacity="0.35"/>
+  <text x="600" y="531.4946666666667" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="26.4" fill="#2e7d32">Seventh</text><text x="600" y="560.5053333333333" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="26.4" fill="#2e7d32">Generation</text>
+  <rect x="540" y="268" width="120" height="40" rx="8" fill="url(#g-plastic)"/>
+  <path d="M520 190 L668 190 Q690 190 690 212 L690 268 L520 268 Z" fill="url(#g-plastic)"/>
+  <rect x="452" y="206" width="76" height="30" rx="6" fill="#d6dae0"/>
+  <path d="M560 268 Q548 320 536 372 L566 376 Q578 320 594 268 Z" fill="#cfd4db"/></g>
+  <text x="1170" y="872" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2" fill="#94a3b8">ILLUSTRATION</text>
 </svg>

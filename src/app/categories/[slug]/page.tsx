@@ -100,7 +100,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               if (!p) return null;
               return (
                 <Link key={s} href={urlFor("review", s)} className="group rounded-xl border border-line p-4 transition hover:border-accent">
-                  <Image src={p.image} alt={p.name} width={400} height={300} className="aspect-[4/3] rounded-lg object-cover" />
+                  <Image src={p.image} alt={`Illustration of the ${p.name}`} width={400} height={300} className="aspect-[4/3] rounded-lg object-cover" />
                   <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-muted">{p.brand}</p>
                   <h3 className="mt-1 font-semibold text-ink group-hover:text-accent-ink">{p.name}</h3>
                   <p className="mt-1 line-clamp-2 text-sm text-muted">{p.tagline}</p>

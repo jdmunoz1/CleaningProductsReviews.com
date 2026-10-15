@@ -27,7 +27,7 @@ export function ProductMini({
       {image && (
         <Image
           src={product.image}
-          alt={product.name}
+          alt={`Illustration of the ${product.name}`}
           width={160}
           height={120}
           className="flex-none rounded-lg object-cover"
