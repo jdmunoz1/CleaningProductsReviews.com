@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { merchants } from "@/content/merchants";
 import { urlFor, getProduct } from "@/lib/catalog";
-import { affiliateUrl } from "@/content/merchants";
+import { AffiliateButton, WorksOn } from "./Label";
 
-/** One product card used on hubs, reviews and best lists. */
+/** One product row used on hubs, reviews and best lists: a strip cut from the back label. */
 export function ProductMini({
   slug,
   rankLabel,
@@ -16,40 +15,44 @@ export function ProductMini({
 }) {
   const product = getProduct(slug);
   if (!product) return null;
-  const merchant = merchants[product.merchantId];
   return (
-    <div className="flex items-start gap-4 rounded-xl border border-line bg-paper-soft p-4">
-      {rankLabel ? (
-        <div className="grid flex-none place-items-center rounded-lg bg-accent/10 px-2.5 py-1 text-xs font-bold tracking-wide text-accent-ink">
-          {rankLabel}
-        </div>
-      ) : null}
+    <div className="not-prose my-4 flex flex-col gap-4 rounded-[6px] border border-rule-strong bg-label p-4 sm:flex-row sm:items-start">
       {image && (
-        <Image
-          src={product.image}
-          alt={`Illustration of the ${product.name}`}
-          width={160}
-          height={120}
-          className="flex-none rounded-lg object-cover"
-          priority={false}
-        />
+        <div className="relative flex-none overflow-hidden rounded-[4px] border border-rule bg-sink sm:w-40">
+          <Image
+            src={product.image}
+            alt={`Illustration of the ${product.name}`}
+            width={320}
+            height={240}
+            sizes="(min-width: 640px) 160px, 100vw"
+            className="aspect-[4/3] w-full object-cover"
+          />
+          {rankLabel ? (
+            <span className="label-caps absolute left-2 top-2 rounded-[3px] border border-ink bg-glove px-2 py-1 text-ink">{rankLabel}</span>
+          ) : null}
+        </div>
       )}
-      <div className="min-w-0">
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted">{product.brand}</p>
-        <Link href={urlFor("review", product.slug)} className="prose-h font-semibold leading-tight hover:text-accent-ink">
+      <div className="min-w-0 flex-1">
+        {rankLabel && !image ? (
+          <span className="label-caps mb-2 inline-block rounded-[3px] border border-ink bg-glove px-2 py-1 text-ink">{rankLabel}</span>
+        ) : null}
+        <p className="label-caps text-ink-3">{product.brand}</p>
+        <Link
+          href={urlFor("review", product.slug)}
+          className="mt-1 block font-display text-lg font-bold leading-snug text-ink [font-stretch:92%] hover:underline hover:underline-offset-4"
+        >
           {product.name}
         </Link>
-        <p className="mt-1 text-sm leading-relaxed text-muted">{product.tagline}</p>
-        <a
-          href={affiliateUrl(product.merchantId, product.productKey)}
-          rel={merchant.rel}
-          target="_blank"
-          referrerPolicy="no-referrer"
-          className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:bg-accent-ink"
-        >
-          {merchant.cta}
-          <span aria-hidden>→</span>
-        </a>
+        <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-2">{product.tagline}</p>
+        <div className="mt-3">
+          <WorksOn items={product.idealFor} max={3} />
+        </div>
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <AffiliateButton product={product} compact />
+          <Link href={urlFor("review", product.slug)} className="ink-link inline-flex min-h-11 items-center text-sm font-semibold">
+            Read the review
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default function GuidesIndexPage() {
         title="Buying Guides"
         lede="How-to and how-to-choose guidance distilled from product documentation and owner experience."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map((g) => (
           <CardLink
             key={g.slug}
@@ -25,6 +25,7 @@ export default function GuidesIndexPage() {
             title={g.title}
             description={g.metaDescription}
             meta={getCategory(g.category)?.name ?? g.category}
+            category={g.category}
           />
         ))}
       </div>

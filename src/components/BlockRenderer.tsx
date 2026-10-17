@@ -3,11 +3,12 @@ import { resolve } from "@/lib/catalog";
 import { ProductMini } from "./ProductMini";
 import type { Block } from "@/content/types";
 
+/* Same ink everywhere; only the left rule and a faint tint say what kind of note it is. */
 const calloutStyles: Record<string, string> = {
-  tip: "border-emerald-200 bg-emerald-50 text-emerald-900",
-  warn: "border-amber-200 bg-amber-50 text-amber-900",
-  info: "border-sky-200 bg-sky-50 text-sky-900",
-  research: "border-violet-200 bg-violet-50 text-violet-950",
+  tip: "border-cloth-green bg-[#eef5f0]",
+  warn: "border-glove-deep bg-glove-soft",
+  info: "border-rinse bg-rinse-soft",
+  research: "border-ink bg-sink",
 };
 const calloutTitles: Record<string, string> = {
   tip: "Tip",
@@ -45,14 +46,14 @@ export function BlockRenderer({ blocks, inArticle = true }: { blocks: Block[]; i
             );
           case "quote":
             return (
-              <blockquote key={i} className="border-l-4 border-line pl-4 italic text-muted">
+              <blockquote key={i} className="my-5 border-l-2 border-rule-strong pl-4 text-lg italic leading-relaxed text-ink-2">
                 {block.text}
               </blockquote>
             );
           case "callout":
             return (
-              <div key={i} className={`my-4 rounded-lg border-l-4 p-4 text-sm leading-relaxed ${calloutStyles[block.tone] ?? calloutStyles.info}`}>
-                <p className="mb-1 text-xs font-bold uppercase tracking-wider">{block.title ?? calloutTitles[block.tone]}</p>
+              <div key={i} className={`not-prose my-5 rounded-r-[4px] border-l-[3px] px-4 py-3 text-[0.9375rem] leading-relaxed text-ink ${calloutStyles[block.tone] ?? calloutStyles.info}`}>
+                <p className="label-caps mb-1 text-ink-2">{block.title ?? calloutTitles[block.tone]}</p>
                 <p>{block.text}</p>
               </div>
             );
@@ -73,19 +74,19 @@ export function BlockRenderer({ blocks, inArticle = true }: { blocks: Block[]; i
 function InlineRelated({ type, slug }: { type: "best" | "guide" | "compare"; slug: string }) {
   const rel = resolve(type, slug);
   return (
-    <Link href={rel.url} className="mt-2 inline-flex items-center gap-2 rounded-md border border-line bg-paper-soft px-3 py-2 text-sm font-medium text-accent-ink hover:bg-accent-soft">
-      <span className="rounded bg-accent-soft px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-accent-ink">
+    <Link href={rel.url} className="group my-2 flex min-h-11 items-center gap-3 rounded-[4px] border border-rule-strong bg-label px-3 py-2 text-[0.9375rem] text-ink transition-colors duration-150 hover:border-ink">
+      <span className="label-caps flex-none rounded-[3px] bg-sink px-1.5 py-1 text-ink-2">
         {type === "best" ? "Best list" : type === "compare" ? "Comparison" : "Guide"}
       </span>
-      <span className="font-semibold">{slug.split("-").join(" ")}</span>
-      <span aria-hidden>→</span>
+      <span className="min-w-0 font-semibold first-letter:uppercase group-hover:underline group-hover:underline-offset-4">{slug.split("-").join(" ")}</span>
+      <span aria-hidden className="ml-auto text-ink-3 group-hover:text-ink">→</span>
     </Link>
   );
 }
 
 export function BlockCursor({ url }: { url: string }) {
   return (
-    <a href={url} className="inline-flex items-center gap-1 text-sm font-semibold text-accent-ink hover:underline">
+    <a href={url} className="ink-link inline-flex items-center gap-1 text-sm font-semibold">
       Read the full review <span aria-hidden>→</span>
     </a>
   );

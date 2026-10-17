@@ -17,7 +17,7 @@ export default function CompareIndexPage() {
         title="Head-to-Head Comparisons"
         lede="The classic either/or decisions, resolved with honest trade-offs rather than marketing."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map((c) => (
           <CardLink
             key={c.slug}
@@ -25,6 +25,7 @@ export default function CompareIndexPage() {
             title={c.title}
             description={c.metaDescription}
             meta={getCategory(c.category)?.name ?? c.category}
+            category={c.category}
           />
         ))}
       </div>

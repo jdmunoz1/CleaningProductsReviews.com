@@ -17,7 +17,7 @@ export default function BestIndexPage() {
         title="Best-Of Lists"
         lede="The essentials per category, compared honestly: what each model is genuinely best at, and who it's wrong for."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map((b) => (
           <CardLink
             key={b.slug}
@@ -25,6 +25,7 @@ export default function BestIndexPage() {
             title={b.title}
             description={b.metaDescription}
             meta={getCategory(b.category)?.name ?? b.category}
+            category={b.category}
           />
         ))}
       </div>

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
 import { categories } from "@/content/categories";
 import { getCategory, getProduct, urlFor, getBest, getGuide, getComparison, fullUrl } from "@/lib/catalog";
 import { JsonLd } from "@/components/JsonLd";
+import { AreaRows, ArticleHeader, BestRows, Breadcrumb, GuideRows, ReviewCard, SectionRule, TitleRows, categoryProductCount } from "@/components/Label";
 import { site } from "@/content/site";
 import { DEFAULT_OG_IMAGE, breadcrumbSchema } from "@/lib/seo";
 
@@ -57,104 +56,79 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     { name: cat.name, url: fullUrl("category", slug) },
   ]);
 
+  const count = categoryProductCount(slug);
+  const featuredProducts = featured.map((s) => getProduct(s)).filter((x): x is NonNullable<typeof x> => x !== undefined);
+
   return (
     <article className="mx-auto max-w-6xl px-4 py-10">
       <JsonLd data={schema} />
       <JsonLd data={crumbs} />
-      <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
-        <Link href="/" className="hover:text-accent-ink">Home</Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">{cat.name}</span>
-      </nav>
+      <Breadcrumb trail={[{ name: "Home", href: "/" }, { name: cat.name, category: slug }]} />
 
-      <header className="max-w-3xl">
-        <h1 className="prose-h">{cat.name}</h1>
-        <p className="mt-3 text-lg leading-relaxed text-muted">{cat.description}</p>
-      </header>
+      <div className="max-w-3xl">
+        <ArticleHeader
+          kicker="Cleaning area"
+          category={slug}
+          title={cat.name}
+          lede={cat.description}
+          aside={
+            <span className="label-caps num rounded-[3px] border border-rule-strong px-2 py-1 text-ink-2">
+              {count} {count === 1 ? "review" : "reviews"}
+            </span>
+          }
+        />
+      </div>
 
       {children.length > 0 && (
-        <section className="mt-10">
-          <h2 className="text-xl font-bold">In this section</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {children.map((c) => (
-              <Link key={c.slug} href={urlFor("category", c.slug)} className="rounded-xl border border-line bg-paper-soft p-5 transition hover:border-accent">
-                <h3 className="font-semibold text-ink hover:text-accent-ink">{c.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{c.short}</p>
-              </Link>
-            ))}
+        <nav aria-labelledby="children-title" className="mt-10 max-w-3xl rounded-[6px] border border-rule-strong bg-label">
+          <div className="flex items-baseline justify-between gap-3 border-b-[3px] border-rule-ink px-5 py-3">
+            <h2 id="children-title" className="label-caps text-ink">In this area</h2>
+            <span aria-hidden className="label-caps text-ink-4">Reviews</span>
           </div>
-        </section>
+          <AreaRows items={children} />
+        </nav>
       )}
 
       {bests.length > 0 && (
-        <section className="mt-12">
-          <h2 className="text-xl font-bold">Best of the category</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {bests.map((b) => (
-              <Link key={b.slug} href={urlFor("best", b.slug)} className="rounded-xl border border-line p-5 transition hover:border-accent">
-                <h3 className="font-semibold text-ink hover:text-accent-ink">{b.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{b.metaDescription}</p>
-              </Link>
-            ))}
-          </div>
+        <section aria-labelledby="best-title" className="mt-14">
+          <SectionRule id="best-title" kicker="Shortlists" title="Best of the category" />
+          <BestRows lists={bests} />
         </section>
       )}
 
-      {featured.length > 0 && (
-        <section className="mt-12">
-          <h2 className="text-xl font-bold">Featured reviews</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((s) => {
-              const p = getProduct(s);
-              if (!p) return null;
-              return (
-                <Link key={s} href={urlFor("review", s)} className="group rounded-xl border border-line p-4 transition hover:border-accent">
-                  <Image src={p.image} alt={`Illustration of the ${p.name}`} width={400} height={300} className="aspect-[4/3] rounded-lg object-cover" />
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-muted">{p.brand}</p>
-                  <h3 className="mt-1 font-semibold text-ink group-hover:text-accent-ink">{p.name}</h3>
-                  <p className="mt-1 line-clamp-2 text-sm text-muted">{p.tagline}</p>
-                </Link>
-              );
-            })}
+      {featuredProducts.length > 0 && (
+        <section aria-labelledby="featured-title" className="mt-14">
+          <SectionRule id="featured-title" kicker="Featured" title="Reviews" />
+          <div className="mt-6 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProducts.map((p) => (
+              <ReviewCard key={p.slug} product={p} />
+            ))}
           </div>
         </section>
       )}
 
       {comparisons.length > 0 && (
-        <section className="mt-12">
-          <h2 className="text-xl font-bold">Head-to-head comparisons</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {comparisons.map((c) => (
-              <Link key={c.slug} href={urlFor("compare", c.slug)} className="rounded-xl border border-line p-5 transition hover:border-accent">
-                <h3 className="font-semibold text-ink hover:text-accent-ink">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{c.metaDescription}</p>
-              </Link>
-            ))}
-          </div>
+        <section aria-labelledby="compare-title" className="mt-14">
+          <SectionRule id="compare-title" kicker="Head to head" title="Comparisons" />
+          <TitleRows
+            items={comparisons.map((c) => ({ href: urlFor("compare", c.slug), title: c.title, description: c.metaDescription, kicker: "Comparison" }))}
+          />
         </section>
       )}
 
       {guides.length > 0 && (
-        <section className="mt-12">
-          <h2 className="text-xl font-bold">Buying guides</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.map((g) => (
-              <Link key={g.slug} href={urlFor("guide", g.slug)} className="rounded-xl border border-line p-5 transition hover:border-accent">
-                <h3 className="font-semibold text-ink hover:text-accent-ink">{g.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{g.metaDescription}</p>
-              </Link>
-            ))}
-          </div>
+        <section aria-labelledby="guides-title" className="mt-14">
+          <SectionRule id="guides-title" kicker="Before you buy" title="Buying guides" />
+          <GuideRows guides={guides} />
         </section>
       )}
 
       {cat.hubIntro.length > 0 && (
-        <section className="mt-12 rounded-xl border border-line bg-paper-soft p-6">
-          <h2 className="text-xl font-bold">Why this cluster exists</h2>
-          <ul className="mt-4 space-y-2">
+        <section aria-labelledby="why-title" className="mt-14 rounded-[6px] bg-sink px-5 py-6 sm:px-6">
+          <h2 id="why-title" className="label-caps text-ink">Why this area has its own section</h2>
+          <ul className="mt-3 grid gap-x-8 gap-y-3 md:grid-cols-2">
             {cat.hubIntro.map((line, i) => (
-              <li key={i} className="flex gap-3 text-sm leading-relaxed text-muted">
-                <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
+              <li key={i} className="border-t border-rule-strong pt-2 text-[0.9375rem] leading-relaxed text-ink-2">
                 {line}
               </li>
             ))}

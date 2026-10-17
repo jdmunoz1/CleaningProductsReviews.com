@@ -28,7 +28,7 @@ export default function ReviewsIndexPage() {
         title="All Product Reviews"
         lede="Research-based reviews of the popular cleaning products in our catalog — from cordless vacuums to stainless steel wipes. No lab we don't have, no invented numbers."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map(({ product, cat }) => (
           <CardLink
             key={product.slug}
@@ -36,6 +36,7 @@ export default function ReviewsIndexPage() {
             title={product.name}
             description={product.tagline}
             meta={cat?.name ?? product.category}
+            category={product.category}
           />
         ))}
       </div>

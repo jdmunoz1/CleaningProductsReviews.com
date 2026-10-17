@@ -17,7 +17,7 @@ export default function BrandsIndexPage() {
         title="Brand Hubs"
         lede="Everything we cover from each maker — their machines and our reviews, in one place."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map((b) => (
           <CardLink
             key={b.slug}

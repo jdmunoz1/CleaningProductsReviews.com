@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { inventory } from "@/lib/catalog";
 import { PageTitle } from "@/components/Page";
+import { AreaRows, SectionRule } from "@/components/Label";
 import { categories } from "@/content/categories";
-import { urlFor } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Sitemap",
@@ -36,23 +36,20 @@ export default function SitemapPage() {
         title="Sitemap"
         lede="Everything on the site, grouped. Handy for jumping straight to a page and for search robots."
       />
-      <h2 id="clusters" className="mt-8 text-lg font-bold">Clusters</h2>
-      <div className="mt-3 grid gap-3 sm:grid-cols-3">
-        {hubs.map((c) => (
-          <Link key={c.slug} href={urlFor("category", c.slug)} className="rounded-lg border border-line p-4 hover:border-accent">
-            <span className="font-semibold text-ink">{c.name}</span>
-            <span className="mt-1 block text-sm text-muted">hub →</span>
-          </Link>
-        ))}
-      </div>
+      <section aria-labelledby="clusters" className="rounded-[6px] border border-rule-strong bg-label">
+        <h2 id="clusters" className="label-caps border-b-[3px] border-rule-ink px-5 py-3 text-ink">Cleaning areas</h2>
+        <AreaRows items={hubs} />
+      </section>
 
       {groups.map((g) => (
         <section key={g.type} id={g.type}>
-          <h2 className="mt-10 text-lg font-bold">{g.label} ({g.items.length})</h2>
-          <ul className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+          <div className="mt-12">
+            <SectionRule kicker={`${g.items.length} pages`} title={g.label} />
+          </div>
+          <ul className="mt-4 grid gap-x-8 gap-y-1 sm:grid-cols-2">
             {g.items.map((e) => (
               <li key={e.url} className="truncate">
-                <Link href={e.url} className="text-sm text-muted hover:text-accent-ink">{e.title}</Link>
+                <Link href={e.url} className="inline-block py-1 text-[0.9375rem] text-ink-2 hover:text-ink hover:underline hover:underline-offset-4">{e.title}</Link>
               </li>
             ))}
           </ul>

@@ -5,11 +5,12 @@ import Link from "next/link";
 import { products } from "@/content/products";
 import { reviews } from "@/content/reviews";
 import { getReview, getProduct, urlFor, categoryName, getCategory, fullUrl } from "@/lib/catalog";
-import { affiliateUrl, merchants, EARNINGS_DISCLOSURE } from "@/content/merchants";
+import { merchants } from "@/content/merchants";
 import { site } from "@/content/site";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
 import { ProductMini } from "@/components/ProductMini";
+import { ArticleHeader, BackLabel, AffiliateButton, Breadcrumb, Disclosure, Faq, MethodStamp, Swatch, WorksOn } from "@/components/Label";
 import { estimateWords, dateFormatter } from "@/lib/utils";
 import { ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productImageUrl, productOgImage } from "@/lib/seo";
 
@@ -95,30 +96,40 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       <JsonLd data={crumbs} />
       {faq && <JsonLd data={faq} />}
 
-      <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
-        <Link href="/" className="hover:text-accent-ink">Home</Link>
-        <span className="mx-2">/</span>
-        <Link href={urlFor("category", product.category)} className="hover:text-accent-ink">{categoryName(product.category)}</Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">{product.name}</span>
-      </nav>
+      <Breadcrumb
+        trail={[
+          { name: "Home", href: "/" },
+          { name: categoryName(product.category), href: urlFor("category", product.category), category: product.category },
+          { name: product.name },
+        ]}
+      />
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
+      <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:gap-12">
         <div className="min-w-0">
-          <header>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent-ink">{product.brand} · {product.kind}</p>
-            <h1 className="mt-2 prose-h">{product.name} Review</h1>
-            <p className="mt-3 text-lg leading-relaxed text-muted">{product.tagline}</p>
-          </header>
-
-          <Image
-            src={product.image}
-            alt={`Illustration of the ${product.name}`}
-            width={1440}
-            height={1080}
-            className="mt-6 aspect-[4/3] w-full rounded-xl object-cover"
-            priority
+          <ArticleHeader
+            kicker={`${product.brand} · ${product.kind}`}
+            title={`${product.name} Review`}
+            lede={product.tagline}
+            aside={<MethodStamp tested={review.tested} />}
           />
+
+          <figure className="mt-6">
+            <div className="overflow-hidden rounded-[6px] border border-rule bg-sink">
+              <Image
+                src={product.image}
+                alt={`Illustration of the ${product.name}`}
+                width={1440}
+                height={1080}
+                sizes="(min-width: 1024px) 760px, 100vw"
+                className="aspect-[4/3] w-full object-cover"
+                priority
+              />
+            </div>
+          </figure>
+
+          <div className="mt-8">
+            <BackLabel product={product} review={review} />
+          </div>
 
           <div className="prose-body mt-6">
             <BlockRenderer blocks={review.overview ?? []} />
@@ -183,57 +194,48 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           </div>
         </div>
 
-        <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-xl border border-line bg-paper-soft p-5">
-            <h2 className="font-bold">At a glance</h2>
-            <dl className="mt-3 space-y-2 text-sm">
-              <div className="flex justify-between gap-3"><dt className="text-muted">Category</dt><dd>{categoryName(product.category)}</dd></div>
-              <div className="flex justify-between gap-3"><dt className="text-muted">Type</dt><dd className="capitalize">{product.kind}</dd></div>
-              <div className="flex justify-between gap-3"><dt className="text-muted">Read time</dt><dd>~{Math.max(1, Math.round(words / 200))} min</dd></div>
+        <aside className="space-y-6 lg:sticky lg:top-36 lg:self-start xl:top-24">
+          <div className="rounded-[6px] border border-rule-strong bg-label">
+            <div className="border-b-[3px] border-rule-ink px-5 py-3">
+              <p className="label-caps text-ink-3">Where to buy</p>
+              <p className="mt-1 font-display text-lg font-bold leading-snug [font-stretch:92%]">{product.name}</p>
+            </div>
+            <div className="px-5 py-4">
+              <p className="label-caps mb-2 text-ink-3">Works on</p>
+              <WorksOn items={product.idealFor} max={4} />
+              <div className="mt-4">
+                <AffiliateButton product={product} full compact />
+              </div>
+              {merchant.name !== "Direct" && (
+                <p className="mt-2 text-center text-xs text-ink-3">We may earn a commission.</p>
+              )}
+            </div>
+            <dl className="divide-y divide-rule border-t border-rule text-sm">
+              <div className="flex justify-between gap-3 px-5 py-2.5"><dt className="text-ink-3">Type</dt><dd className="text-right capitalize">{product.kind}</dd></div>
+              <div className="flex justify-between gap-3 px-5 py-2.5"><dt className="text-ink-3">Read time</dt><dd className="num">~{Math.max(1, Math.round(words / 200))} min</dd></div>
             </dl>
-            <a
-              href={affiliateUrl(product.merchantId, product.productKey)}
-              rel={merchant.rel}
-              target="_blank"
-              referrerPolicy="no-referrer"
-              className="mt-4 block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-white hover:bg-accent-ink"
-            >
-              {merchant.cta}
-            </a>
-            {merchant.name !== "Direct" && (
-              <p className="mt-2 text-center text-xs text-muted">We may earn a commission.</p>
-            )}
-            <p className="mt-4 text-xs leading-relaxed text-muted">{product.priceNote}</p>
           </div>
 
-          {cat && (
-            <div className="mt-4 rounded-xl border border-line p-5">
-              <p className="text-xs font-bold uppercase tracking-wider text-muted">More in {cat.name}</p>
-              <div className="mt-3 space-y-2 text-sm">
+          {cat && (cat.best ?? []).length > 0 && (
+            <div className="border-t-2 border-rule-ink pt-3">
+              <p className="label-caps flex items-center gap-2 text-ink-3">
+                <Swatch category={cat.slug} />
+                More in {cat.name}
+              </p>
+              <ul className="mt-2 divide-y divide-rule text-[0.9375rem]">
                 {(cat.best ?? []).slice(0, 4).map((s) => (
-                  <Link key={s} href={urlFor("best", s)} className="block text-accent-ink hover:underline">{s.split("-").map(capitalize).join(" ")}</Link>
+                  <li key={s}>
+                    <Link href={urlFor("best", s)} className="ink-link block py-2.5">{s.split("-").map(capitalize).join(" ")}</Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           )}
         </aside>
       </div>
 
-      {review.faqs.length > 0 && (
-        <section className="mx-auto mt-12 max-w-3xl">
-          <h2 className="text-2xl font-bold">Frequently asked questions</h2>
-          <div className="mt-6 space-y-4">
-            {review.faqs.map((f, i) => (
-              <details key={i} className="group rounded-xl border border-line p-5">
-                <summary className="flex cursor-pointer items-center justify-between font-semibold">{f.q}</summary>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <p className="mx-auto mt-10 max-w-3xl border-t border-line pt-6 text-xs leading-relaxed text-muted">{EARNINGS_DISCLOSURE}</p>
+      <Faq faqs={review.faqs} kicker="Questions owners ask" />
+      <Disclosure />
     </article>
   );
 }

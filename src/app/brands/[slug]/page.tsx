@@ -3,10 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { brands } from "@/content/brands";
 import { getBrand, getProduct, urlFor, fullUrl } from "@/lib/catalog";
-import { EARNINGS_DISCLOSURE } from "@/content/merchants";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
-import { BrandWordmark } from "@/components/Site";
+import { ArticleHeader, Breadcrumb, Disclosure } from "@/components/Label";
 import { ProductMini } from "@/components/ProductMini";
 import { site } from "@/content/site";
 import { DEFAULT_OG_IMAGE, breadcrumbSchema, productOgImage } from "@/lib/seo";
@@ -66,9 +65,8 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
     <article className="mx-auto max-w-4xl px-4 py-10">
       <JsonLd data={schema} />
       <JsonLd data={crumbs} />
-      <BrandWordmark />
-      <h1 className="mt-4 prose-h">{b.name} — Reviews & Guide</h1>
-      <p className="mt-3 text-lg leading-relaxed text-muted">{b.short}</p>
+      <Breadcrumb trail={[{ name: "Home", href: "/" }, { name: "Brands", href: "/brands" }, { name: b.name }]} />
+      <ArticleHeader kicker="Brand" title={`${b.name} — Reviews & Guide`} lede={b.short} />
       <div className="prose-body mt-6">
         <BlockRenderer blocks={b.intro} />
         <BlockRenderer blocks={b.body} />
@@ -85,7 +83,7 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
         </section>
       )}
 
-      <p className="mt-10 border-t border-line pt-6 text-xs leading-relaxed text-muted">{EARNINGS_DISCLOSURE}</p>
+      <Disclosure />
     </article>
   );
 }

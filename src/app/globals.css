@@ -1,19 +1,49 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: "Georgia", "Times New Roman", ui-serif, serif;
+/*
+ * The "back label" system. The site is research-based, so the visual language
+ * borrows from the thing we actually read: a product's printed back label.
+ * Hairline rules, one heavy ink rule per section, narrow label caps, no shadows.
+ */
+@theme inline {
+  --font-sans: var(--font-source), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
 
-  /* Brand tokens — referenced as bg-accent, text-muted, border-line, etc. */
-  --color-accent: #0e7490;
-  --color-accent-ink: #0b5c73;
-  --color-accent-soft: #e6f2f6;
-  --color-ink: #1f2430;
-  --color-muted: #5b6472;
-  --color-paper: #ffffff;
-  --color-paper-soft: #f6f7f9;
-  --color-line: #e5e8ee;
-  --color-earn: #f7f3ea;
+@theme {
+  /* Surfaces: one warm hue, lightness shifts only. */
+  --color-enamel: #fbfaf7;      /* page: laundry-room enamel */
+  --color-label: #ffffff;       /* the printed label panel */
+  --color-sink: #f2f0eb;        /* inset / quiet bands */
+
+  /* Ink: four text levels. */
+  --color-ink: #1d2126;         /* squeegee rubber */
+  --color-ink-2: #3f464f;
+  --color-ink-3: #5f6670;
+  --color-ink-4: #868c95;       /* decorative only, never body text */
+
+  /* Rules: label hairlines → heavy section rule. */
+  --color-rule: rgb(29 33 38 / 0.12);
+  --color-rule-strong: rgb(29 33 38 / 0.24);
+  --color-rule-ink: #1d2126;
+
+  /* Action + emphasis. Rinse blue = links. Glove yellow = buy / our pick. */
+  --color-rinse: #1d5a85;
+  --color-rinse-deep: #154466;
+  --color-rinse-soft: #e6eef4;
+  --color-glove: #f5c518;
+  --color-glove-deep: #e3b200;
+  --color-glove-soft: #fdf4cc;
+
+  /* Microfiber colour code: marks the cleaning area, nothing else. */
+  --color-cloth-blue: #3b6fa0;
+  --color-cloth-green: #3f8a57;
+  --color-cloth-red: #b5473a;
+  --color-cloth-yellow: #d9a514;
+  --color-cloth-orange: #d8742a;
+  --color-cloth-olive: #6f8a3a;
+  --color-cloth-violet: #6a5a9e;
+  --color-cloth-grey: #7d838c;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,38 +52,87 @@
   }
 }
 
-body {
-  color: var(--color-ink);
-  background: var(--color-paper);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+@layer base {
+  body {
+    color: var(--color-ink);
+    background: var(--color-enamel);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background: var(--color-glove-soft);
+  }
+
+  /* One visible keyboard focus ring: ink outline, glove halo. */
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--color-glove);
+    border-radius: 3px;
+  }
+
+  button:not(:disabled),
+  [role="button"],
+  summary {
+    cursor: pointer;
+  }
+
+  /* FAQ disclosure marker. */
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary .faq-mark::before { content: "+"; }
+  details[open] > summary .faq-mark::before { content: "\2212"; }
 }
 
-::selection {
-  background: color-mix(in srgb, var(--color-accent) 22%, transparent);
+/* Components sit below utilities, so a utility class on the element always wins. */
+@layer components {
+  .font-display { font-family: var(--font-display); }
+
+  /* Narrow uppercase caps, as printed on a label. */
+  .label-caps {
+    font-family: var(--font-display);
+    font-stretch: 80%;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* Pages put .prose-h on the heading itself, so match both forms. */
+  .prose-h h1, h1.prose-h { font-size: clamp(2rem, 4.4vw, 2.9rem); font-weight: 800; font-stretch: 92%; letter-spacing: -0.02em; line-height: 1.05; }
+  .prose-h h2, h2.prose-h { font-size: clamp(1.4rem, 2.4vw, 1.75rem); font-weight: 750; font-stretch: 92%; margin-top: 2.6rem; margin-bottom: 0.6rem; padding-top: 0.9rem; border-top: 1px solid var(--color-rule); letter-spacing: -0.01em; line-height: 1.15; }
+  .prose-h h3, h3.prose-h.h3 { font-size: 1.15rem; font-weight: 700; margin-top: 1.6rem; margin-bottom: 0.4rem; line-height: 1.3; }
+
+  /* Article text. Embedded cards opt out with .not-prose. */
+  .prose-body :is(p, ul, ol):not(.not-prose *) { color: var(--color-ink-2); }
+  .prose-body p:not(.not-prose *) { margin: 0.9rem 0; line-height: 1.7; }
+  .prose-body :is(ul, ol):not(.not-prose *) { margin: 0.9rem 0 0.9rem 1.15rem; }
+  .prose-body ul:not(.not-prose *) { list-style: square; }
+  .prose-body ul:not(.not-prose *) > li::marker { color: var(--color-ink-4); }
+  .prose-body ol:not(.not-prose *) { list-style: decimal; }
+  .prose-body ol:not(.not-prose *) > li::marker { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--color-ink-3); }
+  .prose-body li:not(.not-prose *) { margin: 0.35rem 0; line-height: 1.6; }
+
+  /* Underlines that read as ink on a label, not browser-default blue. */
+  .ink-link {
+    color: var(--color-rinse);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-rinse) 40%, transparent);
+    transition: text-decoration-color 150ms ease-out, color 150ms ease-out;
+  }
+  .ink-link:hover {
+    color: var(--color-rinse-deep);
+    text-decoration-color: currentColor;
+  }
 }
-
-/* One visible keyboard focus ring for every interactive element. */
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-button:not(:disabled),
-[role="button"],
-summary {
-  cursor: pointer;
-}
-
-/* Pages put .prose-h on the heading itself, so match both forms. */
-.prose-h h1, h1.prose-h { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
-.prose-h h2, h2.prose-h { font-size: clamp(1.35rem, 2.4vw, 1.7rem); font-weight: 700; margin-top: 2.2rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; line-height: 1.2; }
-.prose-h h3, h3.prose-h.h3 { font-size: 1.15rem; font-weight: 700; margin-top: 1.6rem; margin-bottom: 0.4rem; line-height: 1.3; }
-
-.prose-body p { margin: 0.9rem 0; line-height: 1.7; color: color-mix(in srgb, var(--color-ink) 92%, transparent); }
-.prose-body ul, .prose-body ol { margin: 0.9rem 0 0.9rem 1.15rem; }
-.prose-body ul { list-style: disc; }
-.prose-body ol { list-style: decimal; }
-.prose-body li { margin: 0.35rem 0; line-height: 1.6; }

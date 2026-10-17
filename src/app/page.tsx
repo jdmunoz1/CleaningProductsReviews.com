@@ -1,13 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
-import { categories } from "@/content/categories";
 import { products } from "@/content/products";
 import { bestLists } from "@/content/best";
 import { guides } from "@/content/guides";
 import { site } from "@/content/site";
-import { urlFor, productName } from "@/lib/catalog";
 import { JsonLd } from "@/components/JsonLd";
-import { BlockRenderer } from "@/components/BlockRenderer";
+import { hubs, AreaRows, BestRows, GuideRows, SectionRule, ReviewCard } from "@/components/Label";
 import { ORGANIZATION, ORGANIZATION_REF } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -17,12 +14,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-/** Top-level hubs only (no `children` of any parent). */
-const hubs = Object.values(categories).filter((c) => !Object.values(categories).some((p) => p.children.includes(c.slug)));
+/** What we read before we recommend anything. Mirrors /review-methodology. */
+const method = [
+  { n: "01", title: "The manual", body: "Manufacturer documentation, specifications and care instructions." },
+  { n: "02", title: "The owners", body: "How long-term owners describe the product after months of real use." },
+  { n: "03", title: "The criteria", body: "Our buying criteria for that surface, that mess and that budget." },
+];
 
 export default function HomePage() {
-  const featured = products.slice(0, 12);
-  const list = bestLists.slice(0, 6);
+  const featured = products.slice(0, 9);
+  const lists = bestLists.slice(0, 6);
+  const guideList = guides.slice(0, 8);
 
   const homeSchema = {
     "@context": "https://schema.org",
@@ -42,86 +44,95 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={homeSchema} />
-      <section className="bg-gradient-to-b from-paper-soft to-paper">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent-ink">Independent reviews · Since {site.founded}</p>
-          <h1 className="max-w-3xl text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">{site.heroTitle}</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{site.tagline}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/reviews" className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-ink">
-              Browse all reviews
-            </Link>
-            <Link href="/product-finder" className="rounded-lg border border-line bg-paper px-5 py-3 text-sm font-semibold text-ink hover:border-accent hover:text-accent-ink">
-              Use the product finder
-            </Link>
-          </div>
-          <p className="mt-6 text-sm italic text-muted">
-            Research-based recommendations from product documentation, specifications and owner feedback — never a lab we don't have.
-          </p>
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl font-bold tracking-tight">Start by cleaning area</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {hubs.map((c) => (
-            <Link key={c.slug} href={urlFor("category", c.slug)} className="group rounded-xl border border-line bg-paper-soft p-5 transition hover:border-accent">
-              <h3 className="font-semibold text-ink group-hover:text-accent-ink">{c.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{c.short}</p>
-              <p className="mt-4 text-sm font-semibold text-accent-ink">Explore the cluster →</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="flex items-end justify-between">
-          <h2 className="text-2xl font-bold tracking-tight">Latest reviews</h2>
-          <Link href="/reviews" className="text-sm font-semibold text-accent-ink hover:underline">See all</Link>
-        </div>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((p) => (
-            <Link key={p.slug} href={urlFor("review", p.slug)} className="group rounded-xl border border-line p-4 transition hover:border-accent">
-              <Image src={p.image} alt={`Illustration of the ${p.name}`} width={1440} height={1080} className="aspect-[4/3] rounded-lg object-cover" />
-              <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-muted">{p.brand}</p>
-              <h3 className="mt-1 font-semibold text-ink group-hover:text-accent-ink">{p.name}</h3>
-              <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted">{p.tagline}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="flex items-end justify-between">
-          <h2 className="text-2xl font-bold tracking-tight">Best-of lists</h2>
-          <Link href="/compare" className="text-sm font-semibold text-accent-ink hover:underline">Comparisons</Link>
-        </div>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {list.map((b) => (
-            <Link key={b.slug} href={urlFor("best", b.slug)} className="group rounded-xl border border-line p-5 transition hover:border-accent">
-              <h3 className="font-semibold text-ink group-hover:text-accent-ink">{b.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{b.metaDescription}</p>
-              <p className="mt-4 text-sm font-semibold text-accent-ink">{b.picks.length} picks →</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-t border-line bg-paper-soft">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="flex items-end justify-between">
-            <h2 className="text-2xl font-bold tracking-tight">Buying guides</h2>
-            <Link href="/guides" className="text-sm font-semibold text-accent-ink hover:underline">All guides</Link>
-          </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.map((g) => (
-              <Link key={g.slug} href={urlFor("guide", g.slug)} className="group rounded-xl border border-line bg-paper p-5 transition hover:border-accent">
-                <h3 className="font-semibold text-ink group-hover:text-accent-ink">{g.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{g.metaDescription}</p>
+      {/* Hero: the question first, the area picker right beside it. */}
+      <section className="border-b border-rule">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
+          <div className="lg:pt-6">
+            <p className="label-caps text-ink-3">
+              Independent reviews · Since <span className="num">{site.founded}</span>
+            </p>
+            <h1 className="mt-4 text-[clamp(2.4rem,6vw,4.1rem)] font-extrabold leading-[0.98] tracking-[-0.025em] [font-stretch:86%]">
+              {site.heroTitle}
+            </h1>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-2">{site.tagline}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/product-finder"
+                className="inline-flex min-h-12 items-center rounded-[4px] bg-ink px-5 text-[0.9375rem] font-semibold text-enamel transition-colors duration-150 hover:bg-ink-2"
+              >
+                Use the product finder
               </Link>
-            ))}
+              <Link
+                href="/reviews"
+                className="inline-flex min-h-12 items-center rounded-[4px] border border-rule-strong px-5 text-[0.9375rem] font-semibold text-ink transition-colors duration-150 hover:border-ink"
+              >
+                Browse all <span className="num mx-1">{products.length}</span> reviews
+              </Link>
+            </div>
+            <p className="mt-8 max-w-lg border-l-2 border-glove pl-4 text-[0.9375rem] leading-relaxed text-ink-2">
+              Research-based recommendations from documentation, specifications and owner feedback. Never a lab we
+              don&rsquo;t have, and never a score we didn&rsquo;t earn.
+            </p>
+          </div>
+
+          <nav aria-labelledby="areas-title" className="rounded-[6px] border border-rule-strong bg-label">
+            <div className="flex items-baseline justify-between gap-3 border-b-[3px] border-rule-ink px-5 py-3">
+              <h2 id="areas-title" className="label-caps text-ink">What are you cleaning?</h2>
+              <span aria-hidden className="label-caps text-ink-4">Reviews</span>
+            </div>
+            <AreaRows items={hubs} />
+          </nav>
+        </div>
+      </section>
+
+      {/* How we review: the honesty statement, set as label directions. */}
+      <section aria-labelledby="method-title" className="bg-sink">
+        <div className="mx-auto max-w-6xl px-4 py-10">
+          <div className="grid gap-8 md:grid-cols-[14rem_1fr]">
+            <div>
+              <h2 id="method-title" className="label-caps text-ink">How we review</h2>
+              <p className="mt-2 text-sm leading-relaxed text-ink-3">
+                Every review says how it was made.{" "}
+                <Link href="/review-methodology" className="ink-link">Read the methodology</Link>
+              </p>
+            </div>
+            <ol className="grid gap-6 sm:grid-cols-3">
+              {method.map((m) => (
+                <li key={m.n} className="border-t border-rule-strong pt-3">
+                  <span className="num font-display text-sm font-bold text-ink-4">{m.n}</span>
+                  <p className="mt-1 font-display text-lg font-bold [font-stretch:92%]">{m.title}</p>
+                  <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-2">{m.body}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
+      </section>
+
+      <section aria-labelledby="latest-title" className="mx-auto max-w-6xl px-4 pt-14">
+        <SectionRule id="latest-title" kicker="Latest" title="Reviews" href="/reviews" linkText="See all reviews" />
+        <div className="mt-6 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((p, i) => (
+            <ReviewCard key={p.slug} product={p} priority={i < 3} />
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="best-title" className="mx-auto max-w-6xl px-4 pt-16">
+        <SectionRule id="best-title" kicker="Shortlists" title="Best-of lists" href="/best" linkText="All best-of lists" />
+        <BestRows lists={lists} />
+      </section>
+
+      <section aria-labelledby="guides-title" className="mx-auto max-w-6xl px-4 pt-16">
+        <SectionRule
+          id="guides-title"
+          kicker="Before you buy"
+          title="Buying guides"
+          href="/guides"
+          linkText={`All ${guides.length} guides`}
+        />
+        <GuideRows guides={guideList} />
       </section>
     </>
   );

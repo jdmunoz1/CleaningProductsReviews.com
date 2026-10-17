@@ -17,7 +17,7 @@ export default function CategoriesIndexPage() {
         title="All Categories"
         lede="Every hub and sub-hub on the site, from robot vacuums to washing machine cleaners."
       />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map((c) => (
           <CardLink
             key={c.slug}
@@ -25,6 +25,7 @@ export default function CategoriesIndexPage() {
             title={c.name}
             description={c.metaDescription}
             meta={`${(c.children ?? []).length} sub-hubs`}
+            category={c.slug}
           />
         ))}
       </div>

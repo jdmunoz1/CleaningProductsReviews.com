@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { guides } from "@/content/guides";
 import { getGuide, relatedHref, fullUrl, getCategory, categoryName, urlFor } from "@/lib/catalog";
-import { EARNINGS_DISCLOSURE } from "@/content/merchants";
 import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
+import { ArticleHeader, Breadcrumb, Disclosure, Faq, SectionRule } from "@/components/Label";
 import { site } from "@/content/site";
 import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema } from "@/lib/seo";
 
@@ -54,25 +54,23 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   ];
   const faq = faqSchema(g.faqs);
 
+  const related = g.related
+    .map((s) => ({ slug: s, href: relatedHref(s) }))
+    .filter((r): r is { slug: string; href: string } => Boolean(r.href));
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
       <JsonLd data={schema} />
       <JsonLd data={breadcrumbSchema(trail)} />
       {faq && <JsonLd data={faq} />}
-      <nav className="mb-5 text-sm text-muted" aria-label="Breadcrumb">
-        <Link href="/" className="hover:text-accent-ink">Home</Link>
-        {cat && (
-          <>
-            <span className="mx-2">/</span>
-            <Link href={urlFor("category", cat.slug)} className="hover:text-accent-ink">{cat.name}</Link>
-          </>
-        )}
-        <span className="mx-2">/</span>
-        <span className="text-ink">{g.title}</span>
-      </nav>
-      <p className="text-xs font-bold uppercase tracking-widest text-accent-ink">Buying guide</p>
-      <h1 className="mt-1 prose-h">{g.title}</h1>
-      <p className="mt-3 text-lg leading-relaxed text-muted">{g.description}</p>
+      <Breadcrumb
+        trail={[
+          { name: "Home", href: "/" },
+          ...(cat ? [{ name: cat.name, href: urlFor("category", cat.slug), category: cat.slug }] : []),
+          { name: g.title },
+        ]}
+      />
+      <ArticleHeader kicker={cat ? `Buying guide · ${cat.name}` : "Buying guide"} category={cat?.slug} title={g.title} lede={g.description} />
       <div className="mt-6 prose-body">
         <BlockRenderer blocks={g.intro} />
       </div>
@@ -81,38 +79,28 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <BlockRenderer blocks={g.body} />
       </div>
 
-      {g.faqs.length > 0 && (
-        <section className="mt-12">
-          <h2 className="prose-h h2">Frequently asked questions</h2>
-          <div className="mt-4 space-y-4">
-            {g.faqs.map((f, i) => (
-              <details key={i} className="group rounded-xl border border-line p-5">
-                <summary className="flex cursor-pointer items-center justify-between font-semibold">{f.q}</summary>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-      )}
+      <Faq faqs={g.faqs} />
 
-      {g.related.length > 0 && (
-        <section className="mt-12">
-          <h2 className="prose-h h2">Keep reading</h2>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {g.related.map((s) => {
-              const href = relatedHref(s);
-              if (!href) return null;
-              return (
-                <Link key={s} href={href} className="rounded-md border border-line bg-paper-soft px-3 py-2 text-sm font-medium text-accent-ink hover:border-accent">
-                  {s.split("-").map(capt).join(" ")}
+      {related.length > 0 && (
+        <section aria-labelledby="related-title" className="mt-14">
+          <SectionRule id="related-title" kicker="Next" title="Keep reading" />
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            {related.map((r) => (
+              <li key={r.slug}>
+                <Link
+                  href={r.href}
+                  className="group flex min-h-12 items-center gap-3 rounded-[4px] border border-rule-strong bg-label px-4 py-2.5 text-[0.9375rem] font-semibold text-ink transition-colors duration-150 hover:border-ink"
+                >
+                  <span className="min-w-0 group-hover:underline group-hover:underline-offset-4">{r.slug.split("-").map(capt).join(" ")}</span>
+                  <span aria-hidden className="ml-auto text-ink-3 group-hover:text-ink">→</span>
                 </Link>
-              );
-            })}
-          </div>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 
-      <p className="mt-10 border-t border-line pt-6 text-xs leading-relaxed text-muted">{EARNINGS_DISCLOSURE}</p>
+      <Disclosure />
     </article>
   );
 }
