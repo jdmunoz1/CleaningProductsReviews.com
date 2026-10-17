@@ -541,47 +541,60 @@ await Promise.all(
   }),
 );
 
-/** Brand mark: teal tile with a white spray-bottle glyph. Used for favicon, apple icon and the schema logo. */
-const markSvg = (size: number, radius: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="${radius}" fill="#0e7490"/>
-  <path d="M22 28 Q22 23 27 22 L27 18 L37 18 L37 22 Q42 23 42 28 L42 50 Q42 53 39 53 L25 53 Q22 53 22 50 Z" fill="#ffffff"/>
-  <path d="M25 11 L39 11 Q41 11 41 13 L41 17 L25 17 Z" fill="#ffffff"/>
-  <rect x="17" y="12" width="9" height="3.5" rx="1.5" fill="#ffffff"/>
-  <rect x="26" y="33" width="12" height="10" rx="2" fill="#0e7490"/>
+/**
+ * Brand mark: a tiny back label (glove-yellow panel, heavy ink rule over printed lines),
+ * matching the header wordmark. Used for favicon, apple icon and the schema logo.
+ * `framed` draws the ink border; the apple icon and logo are full-bleed because
+ * iOS and search results apply their own rounding.
+ */
+const INK = "#1d2126";
+const GLOVE = "#f5c518";
+const ENAMEL = "#fbfaf7";
+const markSvg = (size: number, framed: boolean) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64">
+  ${framed ? `<rect x="2" y="2" width="60" height="60" rx="9" fill="${GLOVE}" stroke="${INK}" stroke-width="4"/>` : `<rect width="64" height="64" fill="${GLOVE}"/>`}
+  <path d="M14 21h36" stroke="${INK}" stroke-width="7"/>
+  <path d="M14 33h36M14 42h25M14 51h31" stroke="${INK}" stroke-width="3.5"/>
 </svg>
 `;
-writeFileSync(join(process.cwd(), "src/app/icon.svg"), markSvg(64, 14), "utf8");
-await sharp(Buffer.from(markSvg(180, 0))).png().toFile(join(process.cwd(), "src/app/apple-icon.png"));
-await sharp(Buffer.from(markSvg(512, 0))).png().toFile(join(ROOT, "logo.png"));
+writeFileSync(join(process.cwd(), "src/app/icon.svg"), markSvg(64, true), "utf8");
+await sharp(Buffer.from(markSvg(180, false))).png().toFile(join(process.cwd(), "src/app/apple-icon.png"));
+await sharp(Buffer.from(markSvg(512, false))).png().toFile(join(ROOT, "logo.png"));
 
-/** Default share image (1200x630) for pages without a product image. */
+/** Default share image (1200x630) for pages without a product image: the site as a printed label. */
 const ogPicks = ["dyson-v15-detect", "windex-original", "o-cel-o-spin-mop"]
   .map((s) => products.find((p) => p.slug === s))
   .filter((p): p is Product => !!p);
-const ogTiles = await Promise.all(ogPicks.map((p) => sharp(Buffer.from(productSvg(p))).resize(360, 270).png().toBuffer()));
+const ogTiles = await Promise.all(ogPicks.map((p) => sharp(Buffer.from(productSvg(p))).resize(315, 236).png().toBuffer()));
+const SANS = "Arial, Helvetica, sans-serif";
 const ogBase = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#ffffff"/>
-  <rect width="1200" height="12" fill="#0e7490"/>
-  <text x="80" y="140" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#1f2430">Cleaning<tspan fill="#0e7490">Products</tspan>Reviews.com</text>
-  <text x="80" y="200" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#5b6472">Independent reviews, comparisons and buying guides</text>
-  <text x="80" y="240" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#5b6472">for cleaning products, tools and machines.</text>
-  <rect x="64" y="300" width="1072" height="290" rx="18" fill="#f1f5f8"/>
+  <rect width="1200" height="630" fill="${ENAMEL}"/>
+  <g transform="translate(72 64) scale(0.75)">
+    <rect x="2" y="2" width="60" height="60" rx="9" fill="${GLOVE}" stroke="${INK}" stroke-width="4"/>
+    <path d="M14 21h36" stroke="${INK}" stroke-width="7"/>
+    <path d="M14 33h36M14 42h25M14 51h31" stroke="${INK}" stroke-width="3.5"/>
+  </g>
+  <text x="134" y="88" font-family="${SANS}" font-size="24" font-weight="700" letter-spacing="1" fill="${INK}">CLEANING PRODUCTS</text>
+  <text x="134" y="114" font-family="${SANS}" font-size="15" font-weight="700" letter-spacing="2.5" fill="#5f6670">REVIEWS · RESEARCH-BASED</text>
+  <rect x="72" y="150" width="1056" height="6" fill="${INK}"/>
+  <text x="72" y="228" font-family="${SANS}" font-size="62" font-weight="700" letter-spacing="-1.5" fill="${INK}">Find the cleaning products</text>
+  <text x="72" y="300" font-family="${SANS}" font-size="62" font-weight="700" letter-spacing="-1.5" fill="${INK}">that actually work.</text>
+  <rect x="72" y="340" width="1056" height="248" rx="8" fill="#ffffff" stroke="rgba(29,33,38,0.24)" stroke-width="2"/>
+  <rect x="72" y="340" width="1056" height="5" fill="${INK}"/>
 </svg>`;
 await sharp(Buffer.from(ogBase))
-  .composite(ogTiles.map((input, i) => ({ input, left: 80 + i * 360, top: 310 })))
+  .composite(ogTiles.map((input, i) => ({ input, left: 100 + i * 343, top: 347 })))
   .jpeg({ quality: 85, mozjpeg: true })
   .toFile(join(ROOT, "og-default.jpg"));
 
-/** Author avatar */
+/** Author avatar: the editorial desk, in label colours. */
 mkdirSync(join(ROOT, "images/authors"), { recursive: true });
 writeFileSync(
   join(ROOT, "images/authors/team.svg"),
   `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Editorial team avatar">
-  <defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e7490"/><stop offset="1" stop-color="#155e75"/></linearGradient></defs>
-  <rect width="400" height="400" rx="80" fill="url(#a)"/>
-  <circle cx="200" cy="150" r="52" fill="#fff" opacity="0.92"/>
-  <path d="M92 340c10-72 54-108 108-108s98 36 108 108z" fill="#fff" opacity="0.92"/>
-  <path d="M150 92l18 40 44 4-33 28 9 42-38-22-38 22 9-42-33-28 44-4z" fill="#fbbf24"/>
+  <rect width="400" height="400" rx="80" fill="${INK}"/>
+  <circle cx="200" cy="150" r="52" fill="${ENAMEL}"/>
+  <path d="M92 340c10-72 54-108 108-108s98 36 108 108z" fill="${ENAMEL}"/>
+  <rect x="150" y="300" width="100" height="14" rx="3" fill="${GLOVE}"/>
 </svg>
 `,
   "utf8",

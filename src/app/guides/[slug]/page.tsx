@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
 import { ArticleHeader, Breadcrumb, Disclosure, Faq, SectionRule } from "@/components/Label";
 import { site } from "@/content/site";
-import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, seoDescription, seoTitle } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const g = getGuide(slug);
   if (!g) return {};
   return {
-    title: g.title,
-    description: g.metaDescription,
+    title: seoTitle(g.title),
+    description: seoDescription(g.metaDescription),
     alternates: { canonical: fullUrl("guide", slug) },
-    openGraph: { title: g.title, description: g.metaDescription, url: fullUrl("guide", slug), type: "article", images: [DEFAULT_OG_IMAGE] },
+    openGraph: { title: g.title, description: seoDescription(g.metaDescription), url: fullUrl("guide", slug), type: "article", images: [DEFAULT_OG_IMAGE] },
   };
 }
 

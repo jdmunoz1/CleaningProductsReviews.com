@@ -5,7 +5,7 @@ import { getCategory, getProduct, urlFor, getBest, getGuide, getComparison, full
 import { JsonLd } from "@/components/JsonLd";
 import { AreaRows, ArticleHeader, BestRows, Breadcrumb, GuideRows, ReviewCard, SectionRule, TitleRows, categoryProductCount } from "@/components/Label";
 import { site } from "@/content/site";
-import { DEFAULT_OG_IMAGE, breadcrumbSchema } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, breadcrumbSchema, seoDescription, seoTitle } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!cat) return {};
   const title = `${cat.name} Reviews & Buying Guides`;
   return {
-    title,
-    description: cat.metaDescription,
+    title: seoTitle(title),
+    description: seoDescription(cat.metaDescription),
     alternates: { canonical: fullUrl("category", slug) },
     openGraph: {
       title,
-      description: cat.metaDescription,
+      description: seoDescription(cat.metaDescription),
       url: fullUrl("category", slug),
       type: "website",
       images: [DEFAULT_OG_IMAGE],

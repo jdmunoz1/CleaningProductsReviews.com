@@ -8,7 +8,7 @@ import { BlockRenderer } from "@/components/BlockRenderer";
 import { ArticleHeader, Breadcrumb, Disclosure } from "@/components/Label";
 import { ProductMini } from "@/components/ProductMini";
 import { site } from "@/content/site";
-import { DEFAULT_OG_IMAGE, breadcrumbSchema, productOgImage } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, breadcrumbSchema, productOgImage, seoDescription, seoTitle } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const b = getBrand(slug);
   if (!b) return {};
-  const description = `${b.short} Research-based ${b.name} reviews, comparisons and buying advice.`;
+  const description = seoDescription(`${b.short} Research-based ${b.name} reviews, comparisons and buying advice.`);
   const lead = getProduct(b.products[0] ?? "");
   return {
-    title: `${b.name} Reviews`,
+    title: seoTitle(`${b.name} Reviews`),
     description,
     alternates: { canonical: fullUrl("brand", slug) },
     openGraph: {

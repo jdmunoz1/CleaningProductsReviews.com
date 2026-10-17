@@ -12,7 +12,7 @@ import { BlockRenderer } from "@/components/BlockRenderer";
 import { ProductMini } from "@/components/ProductMini";
 import { ArticleHeader, BackLabel, AffiliateButton, Breadcrumb, Disclosure, Faq, MethodStamp, Swatch, WorksOn } from "@/components/Label";
 import { estimateWords, dateFormatter } from "@/lib/utils";
-import { ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productImageUrl, productOgImage } from "@/lib/seo";
+import { ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productImageUrl, productOgImage, seoDescription, seoTitle } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -25,9 +25,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const review = getReview(slug);
   const product = getProduct(slug);
   if (!review || !product) return {};
-  const description = `${product.tagline} Research-based review: strengths, weaknesses, value and alternatives.`;
+  // Prefer the full sentence; fall back to a shorter tail rather than cutting words off.
+  const full = `${product.tagline} Research-based review: strengths, weaknesses, value and alternatives.`;
+  const description = seoDescription(full.length <= 160 ? full : `${product.tagline} A research-based review.`);
   return {
-    title: `${product.name} Review`,
+    title: seoTitle(`${product.name} Review`),
     description,
     alternates: { canonical: fullUrl("review", slug) },
     openGraph: {

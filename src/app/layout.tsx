@@ -12,7 +12,8 @@ const source = Source_Sans_3({ subsets: ["latin"], variable: "--font-source", di
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: `Cleaning Product Reviews & Buying Guides | ${site.name}`,
+    // Under 60 characters so it is not truncated; results show the site name separately.
+    default: "Cleaning Product Reviews & Buying Guides",
     template: `%s | ${site.name}`,
   },
   description: site.description,

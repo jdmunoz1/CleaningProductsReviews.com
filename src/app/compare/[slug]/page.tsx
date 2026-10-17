@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { BlockRenderer } from "@/components/BlockRenderer";
 import { AffiliateButton, ArticleHeader, Breadcrumb, Disclosure, Faq, SectionRule, WorksOn } from "@/components/Label";
 import { site } from "@/content/site";
-import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productOgImage } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, ORGANIZATION, ORGANIZATION_REF, breadcrumbSchema, faqSchema, productOgImage, seoDescription, seoTitle } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!c) return {};
   const lead = getProduct(c.a.productSlug ?? "") ?? getProduct(c.b.productSlug ?? "");
   return {
-    title: c.title,
-    description: c.metaDescription,
+    title: seoTitle(c.title),
+    description: seoDescription(c.metaDescription),
     alternates: { canonical: fullUrl("compare", slug) },
     openGraph: {
       title: c.title,
-      description: c.metaDescription,
+      description: seoDescription(c.metaDescription),
       url: fullUrl("compare", slug),
       type: "article",
       images: [lead ? productOgImage(lead.image, `Illustration of the ${lead.name}`) : DEFAULT_OG_IMAGE],
