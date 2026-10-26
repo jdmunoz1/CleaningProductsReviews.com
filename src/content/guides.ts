@@ -397,7 +397,7 @@ export const guides: Guide[] = [
 },
 {
   slug: "how-to-switch-to-green-cleaning",
-  title: "How to Switch to Green Cleaning (Without Giving Up Performance)",
+  title: "How to Switch to Green Cleaning Without Losing Power",
   description: "The realistic swap plan — which bottles to replace first, how to dilute and when technique matters.",
   metaDescription: "How to switch to green cleaning — plant-based sprays, concentrates and on-site systems compared for everyday strength.",
   category: "green-all-purpose-cleaners",
@@ -421,7 +421,7 @@ export const guides: Guide[] = [
     { q: "Do I need to change my whole shelf now?", a: "No — replace as you run out, starting with the most-used formulas, and keep specialists for restoration." },
   ],
   related: ["best-green-all-purpose-cleaners", "ecover-multi-surface", "biokleen-all-purpose", "branch-basics"],
-  updated: "2026-01-20",
+  updated: "2026-10-26",
 },
 {
   slug: "how-to-clean-dishes-with-less-plastic",
@@ -453,7 +453,7 @@ export const guides: Guide[] = [
 },
 {
   slug: "how-to-clean-shower-and-grout",
-  title: "How to Clean Shower Tiles and Grout (Without the All-Day Scrub)",
+  title: "How to Clean Shower Tile and Grout the Easy Way",
   description: "Foam-clean weekly, bleach the black spots, and the moisture habit that keeps grout clean for good.",
   metaDescription: "How to clean shower tiles and grout — foaming cleaner technique, bleach for mold and the drying habit that stops grout stains returning.",
   category: "bathroom-tile-grout",
@@ -477,7 +477,7 @@ export const guides: Guide[] = [
     { q: "Is foam really better than spray?", a: "On vertical surfaces yes — foam clings and works longer instead of running straight down." },
   ],
   related: ["best-tile-grout-cleaners", "kaboom-shower-tub-tile", "tilex-mold-mildew", "best-shower-cleaners"],
-  updated: "2026-01-20",
+  updated: "2026-10-26",
 },
 {
   slug: "how-to-remove-hard-water-stains",
@@ -749,7 +749,7 @@ export const guides: Guide[] = [
 },
 {
   slug: "how-to-choose-a-laundry-detergent",
-  title: "How to Choose a Laundry Detergent (That Actually Matches Your Load)",
+  title: "How to Choose a Laundry Detergent for Your Load",
   description: "Scent, stains, water hardness and HE compatibility — the honest guide to picking the detergent your laundry actually needs.",
   metaDescription: "How to choose a laundry detergent — the honest guide to scent, stain power, water hardness and HE compatibility for your household's load.",
   category: "detergents",
@@ -777,7 +777,7 @@ export const guides: Guide[] = [
     { q: "How much should I use?", a: "Follow the label by load size and water hardness — overdosing builds residue, underdosing leaves marks." },
   ],
   related: ["gain-laundry-detergent", "arm-and-hammer-clean-burst", "tide-hygienic-clean", "persil-proclean", "best-detergents", "gain-vs-arm-and-hammer-detergents"],
-  updated: "2025-07-14",
+  updated: "2026-10-26",
 },
 {
   slug: "how-to-sweep-and-choose-a-broom",

@@ -1,6 +1,6 @@
 {
   slug: "how-to-choose-a-laundry-detergent",
-  title: "How to Choose a Laundry Detergent (That Actually Matches Your Load)",
+  title: "How to Choose a Laundry Detergent for Your Load",
   description: "Scent, stains, water hardness and HE compatibility — the honest guide to picking the detergent your laundry actually needs.",
   metaDescription: "How to choose a laundry detergent — the honest guide to scent, stain power, water hardness and HE compatibility for your household's load.",
   category: "detergents",
@@ -28,5 +28,5 @@
     { q: "How much should I use?", a: "Follow the label by load size and water hardness — overdosing builds residue, underdosing leaves marks." },
   ],
   related: ["gain-laundry-detergent", "arm-and-hammer-clean-burst", "tide-hygienic-clean", "persil-proclean", "best-detergents", "gain-vs-arm-and-hammer-detergents"],
-  updated: "2025-07-14",
+  updated: "2026-10-26",
 },

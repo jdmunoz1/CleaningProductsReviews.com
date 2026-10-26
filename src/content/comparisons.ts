@@ -269,7 +269,7 @@ export const comparisons: Comparison[] = [
 },
 {
   slug: "carpet-cleaner-spot-vs-full",
-  title: "Spot Cleaner vs Full-Size Carpet Cleaner: What Do You Actually Need?",
+  title: "Spot Cleaner vs Full-Size Carpet Cleaner: Which to Buy?",
   description: "Portable extraction versus whole-room machines — the honest division of carpet-cleaning labour.",
   metaDescription: "Portable spot cleaner vs full-size carpet cleaner — which one cleans your carpet stains? The honest division of labour.",
   category: "carpet-cleaners",

@@ -1,6 +1,6 @@
 {
   slug: "how-to-clean-shower-and-grout",
-  title: "How to Clean Shower Tiles and Grout (Without the All-Day Scrub)",
+  title: "How to Clean Shower Tile and Grout the Easy Way",
   description: "Foam-clean weekly, bleach the black spots, and the moisture habit that keeps grout clean for good.",
   metaDescription: "How to clean shower tiles and grout — foaming cleaner technique, bleach for mold and the drying habit that stops grout stains returning.",
   category: "bathroom-tile-grout",
@@ -24,7 +24,7 @@
     { q: "Is foam really better than spray?", a: "On vertical surfaces yes — foam clings and works longer instead of running straight down." },
   ],
   related: ["best-tile-grout-cleaners", "kaboom-shower-tub-tile", "tilex-mold-mildew", "best-shower-cleaners"],
-  updated: "2026-01-20",
+  updated: "2026-10-26",
 },
 {
   slug: "how-to-remove-hard-water-stains",

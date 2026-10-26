@@ -1,6 +1,6 @@
 {
   slug: "how-to-switch-to-green-cleaning",
-  title: "How to Switch to Green Cleaning (Without Giving Up Performance)",
+  title: "How to Switch to Green Cleaning Without Losing Power",
   description: "The realistic swap plan — which bottles to replace first, how to dilute and when technique matters.",
   metaDescription: "How to switch to green cleaning — plant-based sprays, concentrates and on-site systems compared for everyday strength.",
   category: "green-all-purpose-cleaners",
@@ -24,7 +24,7 @@
     { q: "Do I need to change my whole shelf now?", a: "No — replace as you run out, starting with the most-used formulas, and keep specialists for restoration." },
   ],
   related: ["best-green-all-purpose-cleaners", "ecover-multi-surface", "biokleen-all-purpose", "branch-basics"],
-  updated: "2026-01-20",
+  updated: "2026-10-26",
 },
 {
   slug: "how-to-clean-dishes-with-less-plastic",
