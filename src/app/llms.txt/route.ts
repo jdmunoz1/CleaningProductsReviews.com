@@ -1,4 +1,4 @@
-import { inventory, fullUrl } from "@/lib/catalog";
+import { inventory, fullUrl, brandIsIndexable } from "@/lib/catalog";
 import { site } from "@/content/site";
 import type { ContentType } from "@/content/types";
 
@@ -30,7 +30,7 @@ export function GET() {
     `- [Affiliate disclosure](${site.domain}/affiliate-disclosure): How we earn commissions`,
   ];
   for (const s of SECTIONS) {
-    const items = pages.filter((p) => p.type === s.type);
+    const items = pages.filter((p) => p.type === s.type && (p.type !== "brand" || brandIsIndexable(p.slug)));
     if (!items.length) continue;
     lines.push("", `## ${s.heading}`);
     const seen = new Set<string>();

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { inventory, fullUrl } from "@/lib/catalog";
+import { inventory, fullUrl, brandIsIndexable } from "@/lib/catalog";
 import { site } from "@/content/site";
 
 /**
@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pages
       // Only stable, indexable content types.
       .filter((p) => ["category", "review", "best", "compare", "guide", "brand"].includes(p.type))
+      .filter((p) => p.type !== "brand" || brandIsIndexable(p.slug))
       .map((p) => ({
         url: fullUrl(p.type, p.slug),
         lastModified: lastmod(p.updated),

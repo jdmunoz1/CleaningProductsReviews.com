@@ -55,6 +55,23 @@ export function productName(slug: string): string {
   return products.find((x) => x.slug === slug)?.name ?? slug;
 }
 
+/**
+ * A brand page earns a place in search only when it adds something its product reviews don't:
+ * more than one product, or a product that appears in a best-of list or comparison. A
+ * single-product brand with neither is a near-copy of that review, so it is noindexed and left
+ * out of sitemap.xml and llms.txt (it stays reachable for visitors).
+ */
+export function brandIsIndexable(slug: string): boolean {
+  const brand = getBrand(slug);
+  if (!brand) return false;
+  if (brand.products.length > 1) return true;
+  const owned = new Set(brand.products);
+  return (
+    bestLists.some((l) => l.picks.some((p) => owned.has(p.productSlug))) ||
+    comparisons.some((c) => owned.has(c.a.productSlug ?? "") || owned.has(c.b.productSlug ?? ""))
+  );
+}
+
 /* ---- inventory: every page in the site ---- */
 export function inventory(): InventoryEntry[] {
   const entries: InventoryEntry[] = [];
