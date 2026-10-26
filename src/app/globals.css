@@ -20,7 +20,7 @@
   --color-ink: #1d2126;         /* squeegee rubber */
   --color-ink-2: #3f464f;
   --color-ink-3: #5f6670;
-  --color-ink-4: #868c95;       /* decorative only, never body text */
+  --color-ink-4: #6e747e;       /* lightest text: >=4.5:1 on label + enamel; use ink-3 on sink */
 
   /* Rules: label hairlines → heavy section rule. */
   --color-rule: rgb(29 33 38 / 0.12);

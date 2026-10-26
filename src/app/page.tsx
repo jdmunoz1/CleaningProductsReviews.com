@@ -100,7 +100,7 @@ export default function HomePage() {
             <ol className="grid gap-6 sm:grid-cols-3">
               {method.map((m) => (
                 <li key={m.n} className="border-t border-rule-strong pt-3">
-                  <span className="num font-display text-sm font-bold text-ink-4">{m.n}</span>
+                  <span className="num font-display text-sm font-bold text-ink-3">{m.n}</span>
                   <p className="mt-1 font-display text-lg font-bold [font-stretch:92%]">{m.title}</p>
                   <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-2">{m.body}</p>
                 </li>
